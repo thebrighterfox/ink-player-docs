@@ -1,0 +1,236 @@
+import { defineConfig } from 'vitepress'
+
+export default defineConfig({
+  lang: 'en-US',
+  title: 'Ink Player',
+  description: 'Complete documentation for Ink Player — the video & audio player plugin for WordPress.',
+  cleanUrls: true,
+  lastUpdated: true,
+  head: [
+    ['meta', { name: 'theme-color', content: '#5b54ec' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:site_name', content: 'Ink Player Docs' }],
+    ['meta', { property: 'og:title', content: 'Ink Player Documentation' }],
+    ['meta', { property: 'og:description', content: 'Learn how to use Ink Player for WordPress media libraries, video and audio players, playlists, overlays, ads, analytics, lead capture, and integrations.' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:title', content: 'Ink Player Documentation' }],
+    ['meta', { name: 'twitter:description', content: 'Guides for building branded WordPress video and audio experiences with Ink Player.' }],
+  ],
+  themeConfig: {
+    siteTitle: 'Ink Player',
+    nav: [
+      { text: 'Guide', link: '/guide/getting-started', activeMatch: '/guide/' },
+      { text: 'Dashboard', link: '/dashboard' },
+      { text: 'Media', link: '/media', activeMatch: '/media' },
+      { text: 'Playlists', link: '/playlists', activeMatch: '/playlists' },
+      { text: 'Analytics', link: '/analytics' },
+      { text: 'Settings', link: '/settings', activeMatch: '/settings' },
+      { text: 'Changelog', link: '/changelog' },
+    ],
+    sidebar: {
+      '/dashboard': [
+        { text: 'Overview', items: [
+          { text: 'Dashboard', link: '/dashboard' },
+        ]},
+        { text: 'Library', items: [
+          { text: 'Media', link: '/media' },
+          { text: 'Playlists', link: '/playlists' },
+        ]},
+        { text: 'Insights', items: [
+          { text: 'Analytics', link: '/analytics' },
+          { text: 'Leads', link: '/leads' },
+        ]},
+        { text: 'Configure', items: [
+          { text: 'Settings', link: '/settings' },
+          { text: 'Integrations', link: '/settings/integrations' },
+        ]},
+      ],
+      '/guide/': [
+        {
+          text: 'Getting Started',
+          items: [
+            { text: 'What is Ink Player?', link: '/guide/what-is-ink-player' },
+            { text: 'Installation', link: '/guide/installation' },
+            { text: 'Quick Start', link: '/guide/getting-started' },
+          ],
+        },
+        {
+          text: 'Core Concepts',
+          items: [
+            { text: 'Blocks', link: '/guide/blocks' },
+            { text: 'Shortcodes', link: '/guide/shortcodes' },
+            { text: 'Video & Audio Sources', link: '/guide/providers' },
+            { text: 'Overlays', link: '/guide/overlays' },
+            { text: 'Access Control', link: '/guide/access-control' },
+            { text: 'Page Builders', link: '/guide/page-builders' },
+          ],
+        },
+      ],
+      '/media': [
+        {
+          text: 'Media',
+          items: [
+            { text: 'Overview', link: '/media' },
+            {
+              text: 'Media Editor',
+              collapsed: false,
+              items: [
+                { text: 'Basic Settings', link: '/media/video-inspector#basic-settings' },
+                { text: 'Appearance', link: '/media/video-inspector#appearance' },
+                {
+                  text: 'Overlays',
+                  collapsed: true,
+                  items: [
+                    { text: 'Overlay Controls', link: '/media/video-inspector#overlays' },
+                    { text: 'Overlay Visibility', link: '/media/video-inspector#overlay-visibility' },
+                    { text: 'Overlay Types', link: '/media/video-inspector#overlay-types' },
+                    { text: 'Overlay Guide', link: '/guide/overlays' },
+                  ],
+                },
+                { text: 'Ads', link: '/media/video-inspector#ads' },
+                { text: 'Presets', link: '/media/video-inspector#presets' },
+                { text: 'Chapters', link: '/media/video-inspector#chapters' },
+                { text: 'Captions', link: '/media/video-inspector#captions' },
+                { text: 'Multi-Language', link: '/media/multi-language' },
+                { text: 'Global Branding', link: '/media/video-inspector#global-branding' },
+                { text: 'Timestamp', link: '/media/video-inspector#timestamp' },
+                { text: 'Who can watch', link: '/media/video-inspector#who-can-watch' },
+              ],
+            },
+            {
+              text: 'Media Workflows',
+              collapsed: true,
+              items: [
+                { text: 'Sources', link: '/guide/providers' },
+                { text: 'Access Control', link: '/guide/access-control' },
+                { text: 'Presets', link: '/settings/presets' },
+              ],
+            },
+          ],
+        },
+        {
+          text: 'Related',
+          items: [
+            { text: 'Playlists', link: '/playlists' },
+            { text: 'Analytics', link: '/analytics' },
+            { text: 'Leads', link: '/leads' },
+          ],
+        },
+      ],
+      '/playlists': [
+        {
+          text: 'Playlists',
+          items: [
+            { text: 'Overview', link: '/playlists' },
+            {
+              text: 'Playlist Editor',
+              collapsed: false,
+              items: [
+                { text: 'Create a Playlist', link: '/playlists/editor#create-a-playlist' },
+                { text: 'Playlist Identity', link: '/playlists/editor#playlist-identity' },
+                { text: 'Add Media Items', link: '/playlists/editor#add-items-from-the-media-library' },
+                { text: 'Import External Playlists', link: '/playlists/editor#import-external-playlists' },
+                { text: 'Reorder Items', link: '/playlists/editor#reorder-items' },
+                { text: 'Configure Player', link: '/playlists/editor#configure-the-player' },
+                { text: 'Publish Playlist', link: '/playlists/editor#publish-a-playlist' },
+              ],
+            },
+            {
+              text: 'Playlist Layouts',
+              collapsed: true,
+              items: [
+                { text: 'Video Layouts', link: '/playlists/layouts#video-playlist-layouts' },
+                { text: 'Audio Layouts', link: '/playlists/layouts#audio-playlist-layouts' },
+                { text: 'Layout Checklist', link: '/playlists/layouts#layout-checklist' },
+              ],
+            },
+            {
+              text: 'Publishing',
+              collapsed: true,
+              items: [
+                { text: 'Shortcodes', link: '/guide/shortcodes' },
+                { text: 'Blocks', link: '/guide/blocks' },
+                { text: 'Page Builders', link: '/guide/page-builders' },
+              ],
+            },
+          ],
+        },
+        {
+          text: 'Related',
+          items: [
+            { text: 'Media', link: '/media' },
+            { text: 'Analytics', link: '/analytics' },
+            { text: 'Leads', link: '/leads' },
+          ],
+        },
+      ],
+      '/analytics': [
+        { text: 'Overview', items: [
+          { text: 'Dashboard', link: '/dashboard' },
+        ]},
+        { text: 'Insights', items: [
+          { text: 'Analytics', link: '/analytics' },
+          { text: 'Leads', link: '/leads' },
+        ]},
+        { text: 'Library', items: [
+          { text: 'Media', link: '/media' },
+          { text: 'Playlists', link: '/playlists' },
+        ]},
+      ],
+      '/leads': [
+        { text: 'Overview', items: [
+          { text: 'Dashboard', link: '/dashboard' },
+        ]},
+        { text: 'Insights', items: [
+          { text: 'Analytics', link: '/analytics' },
+          { text: 'Leads', link: '/leads' },
+        ]},
+      ],
+      '/settings': [
+        {
+          text: 'Overview',
+          items: [
+            { text: 'Dashboard', link: '/dashboard' },
+          ],
+        },
+        {
+          text: 'Settings',
+          items: [
+            { text: 'Overview', link: '/settings' },
+            { text: 'Branding', link: '/settings/branding' },
+            { text: 'Analytics', link: '/settings/analytics' },
+            { text: 'Presets', link: '/settings/presets' },
+            { text: 'Sharing', link: '/settings/sharing' },
+            { text: 'Ads', link: '/settings/ads' },
+            { text: 'Advanced', link: '/settings/advanced' },
+            { text: 'Webhooks', link: '/settings/webhooks' },
+          ],
+        },
+        {
+          text: 'Integrations',
+          items: [
+            { text: 'Overview', link: '/settings/integrations' },
+            { text: 'Bunny.net', link: '/settings/integrations/bunny-net' },
+            { text: 'Mux', link: '/settings/integrations/mux' },
+            { text: 'YouTube', link: '/settings/integrations/youtube' },
+            { text: 'Vimeo', link: '/settings/integrations/vimeo' },
+            { text: 'Mailchimp', link: '/settings/integrations/mailchimp' },
+            { text: 'MailerLite', link: '/settings/integrations/mailerlite' },
+            { text: 'ActiveCampaign', link: '/settings/integrations/activecampaign' },
+            { text: 'FluentCRM', link: '/settings/integrations/fluentcrm' },
+            { text: 'WooCommerce', link: '/settings/integrations/woocommerce' },
+            { text: 'Elementor', link: '/settings/integrations/elementor' },
+            { text: 'Beaver Builder', link: '/settings/integrations/beaver-builder' },
+            { text: 'Google Analytics', link: '/settings/integrations/google-analytics' },
+          ],
+        },
+      ],
+    },
+    footer: {
+      message: 'Built for WordPress.',
+      copyright: 'Copyright © 2026 Ink Player',
+    },
+    search: { provider: 'local' },
+    outline: { level: [2, 3] },
+  },
+})
