@@ -6,6 +6,11 @@ description: Use the native Ink Player Beaver Builder module to place media and 
 
 Beaver Builder is a page builder for WordPress. Enabling this integration adds a native **Ink Player module** to Beaver Builder, so you can place a player anywhere on a page using the visual builder.
 
+<figure>
+  <img src="/screenshots/settings/integrations/beaver-builder.png" alt="The Ink Player Beaver Builder module">
+  <figcaption>The Ink Player Beaver Builder module</figcaption>
+</figure>
+
 ## What this integration does
 
 - Adds an Ink Player module to Beaver Builder.
@@ -13,10 +18,12 @@ Beaver Builder is a page builder for WordPress. Enabling this integration adds a
 
 ## How to enable
 
+This integration is **enabled by default** — when Beaver Builder is active, the module is available with no setup. To confirm or toggle it:
+
 1. Make sure the **Beaver Builder** plugin is installed and active on your site.
 2. Go to **Settings → [Integrations](/settings/integrations)**.
-3. Find the **Beaver Builder** card under the **Builders** category.
-4. Click **Enable**.
+3. Find the **Beaver Builder** card under the **Builder** category.
+4. Confirm the **Enable** toggle is on.
 
 ## How to use the module
 

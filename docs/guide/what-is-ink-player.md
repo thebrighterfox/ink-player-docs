@@ -6,6 +6,11 @@ description: Learn what Ink Player does for WordPress video and audio, including
 
 Ink Player is a WordPress plugin that adds a branded video and audio player plus a media library to your site, all managed from a modern Vue admin dashboard. It gives you one consistent, customizable player for every source — whether your media lives on your own server, on YouTube, or on a streaming platform like Bunny.net or Mux.
 
+<figure>
+  <img src="/screenshots/guide/admin-overview.png" alt="Ink Player admin menu and Dashboard">
+  <figcaption>Ink Player admin menu and Dashboard</figcaption>
+</figure>
+
 ## One player, every source
 
 Ink Player plays from many [providers](/guide/providers) with a single, consistent player UI:
@@ -20,14 +25,14 @@ Ink Player plays from many [providers](/guide/providers) with a single, consiste
 
 After activation, you get a top-level **Ink Player** menu in the WordPress admin. The dashboard is organized into:
 
-- **Dashboard** — a greeting, last-30-day KPIs, a views/viewers chart, top performing media, recent media and playlists, quick links, and resources.
+- **Dashboard** — last-30-day KPIs, a views/viewers chart, top performing media, recent media and playlists, quick links, and resources.
 - **Library** — [Media](/media) and [Playlists](/playlists).
 - **System** — [Analytics](/analytics), [Leads](/leads), and [Settings](/settings).
 
 Settings is split into **Branding**, **Analytics**, **Presets**, **Sharing**, **Ads**, **Advanced**, **Webhooks**, and [Integrations](/settings/integrations).
 
 ::: tip
-A floating **Docs** tab on the right edge of every admin screen opens the documentation for the screen you are currently viewing.
+A **Docs** link in the admin header opens the documentation for the screen you are currently viewing.
 :::
 
 ## The media record is the source of truth
@@ -43,6 +48,7 @@ Every piece of media you add becomes a **media record**. Wherever you place that
 - [Overlays](/guide/overlays) — calls to action, watermarks, email capture, hotspots, banners, and more
 - [Linear ads](/settings/ads) — pre-roll, mid-roll, and post-roll, custom or VAST
 - [Access control](/guide/access-control) — Public, Private, or Password
+- **Draft and published** — keep media and playlists hidden from visitors while you work, then publish when ready
 - [Sharing](/settings/sharing) with public share links and embed codes
 - Built-in [analytics](/analytics) and [leads](/leads) capture
 - [Branding](/settings/branding) and reusable [presets](/settings/presets)

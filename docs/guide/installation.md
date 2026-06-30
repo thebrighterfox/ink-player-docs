@@ -42,7 +42,7 @@ After activation, a top-level **Ink Player** menu appears in the WordPress admin
 - **System** — [Analytics](/analytics), [Leads](/leads), and [Settings](/settings)
 
 ::: tip
-A floating **Docs** tab on the right edge of every Ink Player screen opens the documentation for whatever you are looking at.
+A **Docs** link in the Ink Player admin header opens the documentation for whatever you are looking at.
 :::
 
 ## Next steps

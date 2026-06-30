@@ -23,7 +23,12 @@ Ink Player can play from many [providers](/guide/providers), but the fastest way
    - **Paste a URL** — for example a YouTube link, a Vimeo link, or a direct `.mp4` URL.
    - **Select from the WordPress media library** — pick a file you have already uploaded.
    - **Choose a source** — YouTube, Vimeo, Bunny.net, Mux, or Private upload.
-3. Give the media a title and save.
+3. Give the media a title, then choose **Publish** to make it live or **Save as draft** to keep it hidden from visitors until you are ready. Drafts stay invisible to the public — only you and other admins can see them.
+
+<figure>
+  <img src="/screenshots/guide/add-media.png" alt="Add media dialog — upload, paste a URL, or pick a provider">
+  <figcaption>Add media dialog — upload, paste a URL, or pick a provider</figcaption>
+</figure>
 
 ::: tip
 Ink Player detects the source type from the URL you paste — an HLS `.m3u8`, a DASH `.mpd`, an MP4, or a platform link such as YouTube — and uses the same consistent player for all of them.

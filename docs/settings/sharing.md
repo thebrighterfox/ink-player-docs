@@ -6,6 +6,11 @@ description: Configure Ink Player share links, standalone watch pages, iframe em
 
 Sharing controls where your **Share** links open. Every media item in Ink Player has a built-in Share action that gives viewers a clean public link and a ready-to-paste embed code — this page decides which page on your site hosts those links.
 
+<figure>
+  <img src="/screenshots/settings/sharing-dialog.png" alt="Share / Embed dialog with Link and Embed tabs">
+  <figcaption>Share / Embed dialog with Link and Embed tabs</figcaption>
+</figure>
+
 ## How sharing works
 
 From the [Media](/media) library (and the player's own menu, where enabled), a **Share** action opens a dialog with two things:

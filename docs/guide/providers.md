@@ -6,6 +6,11 @@ description: Compare Ink Player media providers, including local uploads, direct
 
 Ink Player uses **one consistent player for every source**. Whether your media is self-hosted, on YouTube, or on a streaming platform, viewers get the same player UI. This page lists every supported source type and how to add each one.
 
+<figure>
+  <img src="/screenshots/guide/source-picker.png" alt="Choosing a source type when adding media">
+  <figcaption>Choosing a source type when adding media</figcaption>
+</figure>
+
 ## Supported sources
 
 | Source | Type | What it is | How to add |
@@ -15,7 +20,7 @@ Ink Player uses **one consistent player for every source**. Whether your media i
 | **YouTube** | Platform | A YouTube video | Paste the YouTube URL, or choose the **YouTube** source |
 | **Vimeo** | Platform | A Vimeo video | Paste the Vimeo URL, or choose the **Vimeo** source |
 | **Bunny.net Stream** | Streaming | Video hosted on Bunny.net Stream | Choose the **Bunny.net** source |
-| **Bunny.net Classic Storage** | Storage | A file on Bunny.net Classic Storage | Choose the **Bunny.net** source |
+| **Bunny Storage** | Storage | A file on Bunny.net's classic storage | Choose the **Bunny Storage** source |
 | **Mux** | Streaming | Video hosted on Mux | Choose the **Mux** source |
 
 ## Three ways to add media
@@ -36,7 +41,7 @@ Pasting is usually the quickest path. For platform links, just paste the page UR
 - **Adaptive streaming:** HLS (`.m3u8`) and DASH (`.mpd`)
 - **Audio:** MP3 and other common audio formats
 - **Platforms:** YouTube, Vimeo
-- **Streaming/storage services:** Bunny.net Stream, Bunny.net Classic Storage, and Mux
+- **Streaming/storage services:** Bunny.net Stream, Bunny Storage, and Mux
 
 ## Provider integrations
 

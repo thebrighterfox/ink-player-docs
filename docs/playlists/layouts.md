@@ -1,39 +1,80 @@
 ---
-description: Configure Ink Player video and audio playlist layouts, including list placement, compact playlist views, side layouts, and audio track lists.
+description: Configure Ink Player playlist layouts — the List, Grid, and Slider layouts for video playlists, the List layout for audio, and their per-layout options.
 ---
 
 # Playlist layouts
 
-Playlist layouts control how the player and item list appear together on the page. Choose the layout based on the content type, page width, and how often viewers need to browse the list while watching or listening.
+A playlist layout controls how the player and the item list appear together. In the **Playlist Editor**, open the **Layout** panel, pick a layout tile, then click its pencil to open the settings drawer for that layout.
 
-## Video playlist layouts
+<figure>
+  <img src="/screenshots/playlists/layout-picker.png" alt="Layout panel — List, Grid, and Slider">
+  <figcaption>Layout panel — List, Grid, and Slider</figcaption>
+</figure>
 
-Video playlists show a primary player plus a list of playlist items. Use the layout controls in the **Playlist Editor** or playlist block inspector to choose how the list is placed.
+Video playlists offer three layouts — **List**, **Grid**, and **Slider**. Audio playlists always use the **List** layout (audio plays in a bar, so the list only stacks above or below it).
 
-Common layout decisions:
+<figure>
+  <img src="/screenshots/playlists/layouts-rendered.png" alt="List, Grid, and Slider layouts on the frontend">
+  <figcaption>List, Grid, and Slider layouts on the frontend</figcaption>
+</figure>
 
-| Setting | Best use |
+::: tip
+**Hide playlist in fullscreen** is available in every layout's drawer. Turn it on to let the player go fullscreen on its own, without the playlist alongside it.
+:::
+
+## Video layouts
+
+### List
+
+A primary player with a vertical list of items.
+
+| Option | What it does |
 | --- | --- |
-| **List below the player** | Default article, course, and landing page embeds where the video should stay full width. |
-| **List above the player** | Pages where viewers should choose an item before watching. |
-| **Side list** | Wider pages where viewers should browse episodes while the current video remains visible. |
-| **Compact or collapsed list** | Dense pages, sidebars, or smaller placements where the list should not dominate the player. |
+| **Position** | **Right**, **Left**, **Above player**, or **Below player**. |
+| **Start collapsed** | Renders the list hidden; viewers open it with the expand button. Side positions (Left/Right) only. |
+| **Collapse list on select** | Hides the list after a track is chosen. Side positions (Left/Right) only. |
+| **Show numbers** | Shows the item index in the list. |
+| **Show thumbnails** | Shows each item's poster image. |
+| **Show duration** | Shows each item's length. |
 
-Use a side layout only when the content area is wide enough. On narrow screens, the layout should stack so the video remains readable and the list stays usable.
+Use a side position only when the content area is wide enough; on narrow screens the list stacks below the player.
 
-## Audio playlist layouts
+### Grid
 
-Audio playlists are optimized around a track list and audio controls. They work well for albums, podcasts, sermons, lessons, guided audio, and downloadable audio libraries.
+A player with a grid of item cards.
 
-Common audio layout decisions:
-
-| Setting | Best use |
+| Option | What it does |
 | --- | --- |
-| **Track list below controls** | Standard listening pages where playback controls should appear first. |
-| **Track list above controls** | Archive pages where choosing a track is the primary action. |
-| **Compact list** | Sidebars, lesson pages, and dense resource areas. |
+| **Position** | **Below player** or **Above player**. |
+| **Columns** | Number of cards per row, from **2** to **6**. |
+| **Show title** | Shows each item's title under its card. |
+| **Show duration** | Shows each item's length. |
 
-Keep audio titles short enough for mobile screens. If your audio titles are long, use clear episode numbers or module prefixes so viewers can scan the list quickly.
+### Slider
+
+One item plays at a time, navigated by arrows, dots, or a thumbnail strip.
+
+| Option | What it does |
+| --- | --- |
+| **Slider type** | **Basic (carousel)** — a single player navigated by controls — or **Thumbnails** — a scrolling strip of cards beside the player. |
+| **Side arrows** | Shows previous/next arrows. |
+| **Dots** | Shows pagination dots below the player. Basic carousel only. |
+| **Position** | **Below player** or **Above player**. Thumbnails type only. |
+| **Items per view** | How many thumbnails show at once, from **2** to **6**. Thumbnails type only. |
+| **Show title** / **Show duration** | Shown on the thumbnail cards. Thumbnails type only. |
+
+## Audio layout
+
+Audio playlists always use the **List** layout, stacked above or below the audio bar.
+
+| Option | What it does |
+| --- | --- |
+| **Position** | **Below player** or **Above player** only (no side or collapsed options). |
+| **Show numbers** | Shows the track index. |
+| **Show album art** | Shows each track's artwork. |
+| **Show duration** | Shows each track's length. |
+
+Keep audio titles short enough for mobile screens. If titles are long, use clear episode numbers or module prefixes so listeners can scan the list quickly.
 
 ## Layout checklist
 
@@ -43,18 +84,19 @@ Before publishing a playlist, check:
 - The list order matches the expected viewing or listening sequence.
 - The layout works on mobile and desktop.
 - Posters and titles are consistent across all items.
-- Private or password-protected media uses the same access strategy across the playlist.
+- Private media uses the same access strategy across the playlist.
 - Imported provider items have the correct thumbnails and titles.
 
 ## Recommended patterns
 
 | Use case | Recommended layout |
 | --- | --- |
-| Online course module | Video player with list below or side list on wide pages. |
-| Podcast archive | Audio playlist with track list below controls. |
-| Product demos | Video playlist with strong poster images and list below the player. |
-| Sermon or lecture series | Video or audio playlist grouped by date or series order. |
-| Music album | Audio playlist with compact track list. |
+| Online course module | **List** with a side position on wide pages, below the player on narrow ones. |
+| Podcast or audio archive | **List** (audio) with the track list below the player. |
+| Product demos | **Grid** with strong poster images. |
+| Featured / spotlight reel | **Slider** (Basic carousel) so one item plays at a time. |
+| Episode browser | **Slider** (Thumbnails) for a scrollable strip beside the player. |
+| Music album | **List** (audio) with the track list below the player. |
 
 ## Related
 

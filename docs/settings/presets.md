@@ -6,6 +6,11 @@ description: Choose default Ink Player video and audio presets for layout, contr
 
 Presets are reusable player-configuration bundles — layout/skin, controls, behaviors, overlays, and branding overrides. On this page you choose which preset **new** media items start with.
 
+<figure>
+  <img src="/screenshots/settings/presets.png" alt="Preset tiles with the preview action">
+  <figcaption>Preset tiles with the preview action</figcaption>
+</figure>
+
 ## Default presets
 
 Pick a default **Video preset** and a default **Audio preset**. These apply only to media you create from now on — existing media keep whatever preset they already use.

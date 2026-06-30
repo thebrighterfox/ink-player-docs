@@ -6,6 +6,11 @@ description: Configure timed video overlays in Ink Player, including CTAs, actio
 
 Overlays are timed elements that appear **on top of the player** — a call to action, a watermark, an email form, a clickable hotspot, a banner, a WordPress shortcode, and more. You can place any number of overlays on a video and control exactly where and when each one shows.
 
+<figure>
+  <img src="/screenshots/guide/overlay-drawer.png" alt="Overlay editor drawer with live preview">
+  <figcaption>Overlay editor drawer with live preview</figcaption>
+</figure>
+
 ## Where to configure overlays
 
 Overlays live in the **Overlays** panel of the player configuration:

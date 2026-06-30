@@ -6,6 +6,11 @@ description: Configure Ink Player global settings for branding, analytics, prese
 
 The Settings area lives under the **Ink Player** admin menu → **Settings**. A left sidebar lets you move between each settings section. Whenever you change a value, a Save bar appears at the bottom of the page with **Save** and **Discard** buttons — your changes aren't applied until you save.
 
+<figure>
+  <img src="/screenshots/settings/overview.png" alt="Settings layout with the save bar">
+  <figcaption>Settings layout with the save bar</figcaption>
+</figure>
+
 ## Sections
 
 - **[Branding](/settings/branding)** — Add your logo and brand color so every player matches your site.

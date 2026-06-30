@@ -6,6 +6,11 @@ description: Create video and audio playlists in Ink Player, choose layouts, ord
 
 A **playlist** (`/playlists`) is an ordered collection of media items of a single type — either video or audio. Playlists reuse the same media records as the [Media](/media) library, so any edit to a media item is reflected wherever the playlist appears.
 
+<figure>
+  <img src="/screenshots/playlists/library.png" alt="Playlist library list">
+  <figcaption>Playlist library list</figcaption>
+</figure>
+
 ## Creating a playlist
 
 1. On the Playlists page, click **Add playlist**.
@@ -20,8 +25,8 @@ The editor lets you shape both the contents and the player:
 
 - **Reorder items** — move items up or down
 - **Remove items** from the collection
-- **Configure the player** — appearance and playback options
-- **Choose layout options** — list position (above/below) and slider/list layouts
+- **Configure playback** — **Auto-play next**, **Shuffle**, and **Repeat**
+- **Choose a layout** — **List**, **Grid**, or **Slider** (audio playlists use the List layout only)
 - **Set access control** — who can watch the playlist
 
 See [Playlist editor](/playlists/editor) for the complete creation, import, ordering, and publishing workflow. See [Playlist layouts](/playlists/layouts) for layout guidance.
@@ -37,14 +42,27 @@ The table mirrors the Media library:
 | **Title** | Playlist name |
 | **Type** | Video or audio |
 | **Items** | Number of items in the playlist |
-| **Privacy** | Access level |
-| **Status** | Current state |
+| **Privacy** | Access level — **Public** or **Private** |
+| **Status** | **Published** (visible to visitors) or **Draft** (visible only to you) |
 | **Shortcode** | A copyable `[ink_playlist id="N"]` |
 | **Created** | When the playlist was added |
 
 ### Row actions and filters
 
-The **⋮** row menu offers **Preview**, **Edit**, **Duplicate**, and **Delete** — the same actions as the Media library. Use the search box and filters to narrow the list.
+The **⋮** row menu offers **Preview**, **Edit**, **Share / Embed**, **Duplicate**, and **Delete** — the same actions as the Media library. Use the search box and filters to narrow the list.
+
+## Draft and published playlists
+
+Like media, every playlist is either **published** or a **draft**. The Playlist Editor footer has **Save as draft** and **Publish** buttons.
+
+- **Drafts** are hidden from public visitors entirely. As an admin you still see the playlist player plus an amber badge: *"Draft — only you can see this. Publish it to show it to visitors."*
+- **Published** playlists are visible to everyone, subject to the playlist's access setting.
+
+Both footer buttons stay **disabled until you add at least one item** — an empty playlist cannot be saved.
+
+::: info Public or Private only
+A playlist's access is **Public** or **Private** — there is no per-playlist **Password** mode (unlike individual media). A private playlist is shown to logged-in members only and gates the whole collection before any track loads.
+:::
 
 ## Embedding a playlist
 

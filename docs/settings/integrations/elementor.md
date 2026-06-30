@@ -6,6 +6,11 @@ description: Use the native Ink Player Elementor widget to place media and playl
 
 Elementor is a popular page builder for WordPress. Enabling this integration adds a native **Ink Player widget** to the Elementor editor, so you can place a player anywhere on a page using the visual builder.
 
+<figure>
+  <img src="/screenshots/settings/integrations/elementor.png" alt="The Ink Player Elementor widget">
+  <figcaption>The Ink Player Elementor widget</figcaption>
+</figure>
+
 ## What this integration does
 
 - Adds an Ink Player widget to the Elementor editor.
@@ -13,10 +18,12 @@ Elementor is a popular page builder for WordPress. Enabling this integration add
 
 ## How to enable
 
+This integration is **enabled by default** — when Elementor is active, the widget is available with no setup. To confirm or toggle it:
+
 1. Make sure the **Elementor** plugin is installed and active on your site.
 2. Go to **Settings → [Integrations](/settings/integrations)**.
-3. Find the **Elementor** card under the **Builders** category.
-4. Click **Enable**.
+3. Find the **Elementor** card under the **Builder** category.
+4. Confirm the **Enable** toggle is on.
 
 ## How to use the widget
 

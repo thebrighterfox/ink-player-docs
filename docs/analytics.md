@@ -6,6 +6,11 @@ description: Understand Ink Player analytics, including views, watch time, reten
 
 **Analytics** (`/analytics`) shows how people watch and listen to your content — views, viewers, watch time, devices, and more.
 
+<figure>
+  <img src="/screenshots/analytics/overview.png" alt="Analytics overview with KPI cards and the views chart">
+  <figcaption>Analytics overview with KPI cards and the views chart</figcaption>
+</figure>
+
 ::: warning Analytics is off by default
 Data is **only collected when you enable it** in [Settings → Analytics](/settings/analytics). If analytics is off, a banner on the page links you straight to the setting to turn it on. Nothing is recorded until then.
 :::
@@ -32,6 +37,11 @@ Analytics is organized into four tabs: **Overview**, **Media**, **Audience**, an
 ### Overview
 
 The Overview tab summarizes performance across all content.
+
+<figure>
+  <img src="/screenshots/analytics/breakdowns.png" alt="Device, provider, and audience breakdowns">
+  <figcaption>Device, provider, and audience breakdowns</figcaption>
+</figure>
 
 **KPIs:**
 

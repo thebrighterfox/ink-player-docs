@@ -1,40 +1,62 @@
 ---
-description: Send Ink Player lead capture payloads to custom webhook URLs with POST or query-string delivery.
+description: Forward captured Ink Player leads to any URL with POST JSON or GET query-string delivery and custom headers.
 ---
 
 # Webhooks
 
-Webhooks let you send Ink Player payloads — such as captured [leads](/leads) — to any URL you choose. When an event fires, Ink Player **POSTs a JSON payload** to your destination URL, where another app or service can act on it.
+Webhooks forward captured [leads](/leads) to any URL you choose. When a lead is captured and delivered to a webhook, Ink Player sends the lead payload to your destination URL, where another app or service can act on it.
 
-Webhooks are a delivery destination for [Leads](/leads), alongside the email and CRM integrations available under [Integrations](/settings/integrations).
+Webhooks are one of the delivery destinations for [Leads](/leads), alongside the email and CRM integrations available under [Integrations](/settings/integrations).
 
-## How a webhook works
+<figure>
+  <img src="/screenshots/settings/webhooks.png" alt="Webhook dialog — Name, URL, Method, and Headers">
+  <figcaption>Webhook dialog — Name, URL, Method, and Headers</figcaption>
+</figure>
+
+## How a Webhook Works
 
 Each webhook has:
 
-- A **destination URL** — where the payload is sent.
-- The **event(s)** it listens to — Ink Player POSTs the JSON payload to the URL whenever one of those events fires.
+- **Name** — a label so you can recognize it in the list. Required.
+- **Destination URL** — where the payload is sent. Required.
+- **Method** — `POST` or `GET`. This controls how the payload is delivered.
+- **Headers** — optional custom request headers, added as key/value pairs.
 
-## Creating a webhook
+### Method Behavior
 
-1. Add a new webhook.
-2. Enter the destination URL that should receive the payload.
-3. Select the event(s) the webhook should listen to.
-4. Save.
+- **POST** — the payload is sent as a **JSON body** with a `Content-Type: application/json` header.
+- **GET** — the payload is appended to the destination URL as a **query string**.
 
-## Testing a webhook
+## Creating a Webhook
 
-Use the test action to send a sample payload to your destination URL. This confirms the endpoint is reachable and that the receiving service handles the payload as expected, without waiting for a real event.
+1. Select **Add webhook**.
+2. Enter a **Name** and the **Destination URL** that should receive the payload.
+3. Choose the **Method** — `POST` or `GET`.
+4. Optionally add custom **Headers** as key/value pairs.
+5. Select **Create webhook**.
 
-::: tip
-Test a webhook right after creating it so you catch a wrong URL or a misconfigured endpoint before any real events fire.
-:::
+To start sending leads here, pick **Webhooks** as the delivery destination on the [Leads](/leads) side.
 
-## Editing and deleting a webhook
+## The Payload
 
-- **Edit** — Update the destination URL or change which events it listens to, then save.
-- **Delete** — Remove the webhook. Once deleted, no further payloads are sent to that URL.
+Webhooks receive the captured-lead payload. It is sent whenever a lead is captured and routed to the webhook, with these fields:
+
+- `event` — always `lead.captured`.
+- `email` — the captured email address.
+- `name` — the lead's name, if provided.
+- `content_id` — the numeric ID of the related media.
+- `content_uid` — the media's unique identifier.
+- `content_type` — the content type, e.g. `video`.
+- `source_url` — the page the lead was captured on.
+- `captured_at` — an ISO 8601 timestamp.
+
+## Editing and Deleting a Webhook
+
+Open the row menu to manage a webhook:
+
+- **Edit** — update the name, destination URL, method, or headers, then save.
+- **Delete** — remove the webhook. Once deleted, no further payloads are sent to that URL.
 
 ::: info
-Remember to **Save** from the Save bar at the bottom of the page after making changes.
+Webhooks are saved as you create, edit, or delete them in the dialog — there is no separate Save bar on this page.
 :::
