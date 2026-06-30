@@ -6,6 +6,11 @@ description: Connect Ink Player to Bunny.net, Mux, YouTube, Vimeo, Mailchimp, Ma
 
 The **Settings → Integrations** screen is where you connect Ink Player to the storage providers, video platforms, marketing tools, and page builders you already use. Everything is presented as a grid of cards so you can see — and turn on — exactly what you need.
 
+<figure>
+  <img src="/screenshots/settings/integrations/overview.png" alt="Integrations grid in the admin">
+  <figcaption>Integrations grid in the admin</figcaption>
+</figure>
+
 <IntegrationGrid />
 
 ## The Integrations grid
@@ -22,7 +27,7 @@ Cards are organized into categories so related tools are grouped together:
 - **Email** — email marketing and newsletter services.
 - **CRM** — customer-relationship and contact tools.
 - **E-commerce** — online store platforms.
-- **Builders** — page builders Ink Player plugs into.
+- **Builder** — page builders Ink Player plugs into.
 - **Analytics** — playback and engagement reporting.
 
 ## Enabling and managing an integration
@@ -40,46 +45,11 @@ You can enable an integration first and configure it later. Until valid credenti
 
 ## Test connection
 
-Configurable integrations include a **Test connection** button on their Manage screen. After entering your credentials, click it to confirm that Ink Player can reach the service and that your keys are valid — before you rely on the integration for live media.
+Most credential-based integrations include a **Test connection** button on their Manage screen. After entering your credentials, click it to confirm that Ink Player can reach the service and that your keys are valid — before you rely on the integration for live media. A few (such as Bunny.net) save without a test step.
 
 ::: warning
 If **Test connection** fails, double-check each credential for stray spaces or copy-paste errors and confirm the keys belong to the correct account or library. Save and test again until it succeeds.
 :::
-
-## Available integrations
-
-### Storage
-
-- [Bunny.net](/settings/integrations/bunny-net)
-- [Mux](/settings/integrations/mux)
-
-### Video
-
-- [YouTube](/settings/integrations/youtube)
-- [Vimeo](/settings/integrations/vimeo)
-
-### Email
-
-- [Mailchimp](/settings/integrations/mailchimp)
-- [MailerLite](/settings/integrations/mailerlite)
-
-### CRM
-
-- [ActiveCampaign](/settings/integrations/activecampaign)
-- [FluentCRM](/settings/integrations/fluentcrm)
-
-### E-commerce
-
-- [WooCommerce](/settings/integrations/woocommerce)
-
-### Builders
-
-- [Elementor](/settings/integrations/elementor)
-- [Beaver Builder](/settings/integrations/beaver-builder)
-
-### Analytics
-
-- [Google Analytics](/settings/integrations/google-analytics)
 
 ::: info
 Storage and Video integrations feed directly into your [Media](/media) library. For how protected content stays private, see [Access control](/guide/access-control).

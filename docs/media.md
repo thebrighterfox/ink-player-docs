@@ -8,6 +8,11 @@ The **Media** library (`/media`) is where you manage every reusable video and au
 
 For the complete right-side editor reference, see [Video inspector panels](/media/video-inspector).
 
+<figure>
+  <img src="/screenshots/media/library.png" alt="Media library list with row actions">
+  <figcaption>Media library list with row actions</figcaption>
+</figure>
+
 ## What a media item holds
 
 Each media item stores:
@@ -57,7 +62,7 @@ The Media library lists every item with these columns:
 | **Type** | Video or audio |
 | **Provider** | The provider logo |
 | **Duration** | Length of the media |
-| **Status** | Current state |
+| **Status** | **Published** (visible to visitors) or **Draft** (visible only to you) |
 | **Shortcode** | A copyable `[ink_player id="N"]` |
 | **Created** | When the item was added |
 
@@ -67,10 +72,27 @@ Open the **⋮** menu on any row for:
 
 - **Preview**
 - **Edit**
+- **Share / Embed**
 - **Duplicate**
 - **Delete**
 
 Select multiple rows to enable **bulk delete**.
+
+## Draft and published media
+
+Every media item is either **published** or a **draft**. In the Media Editor, the footer has two buttons — **Save as draft** and **Publish** — so you choose the state as you save.
+
+<figure>
+  <img src="/screenshots/media/editor-draft-badge.png" alt="Media editor preview showing the draft badge">
+  <figcaption>Media editor preview showing the draft badge</figcaption>
+</figure>
+
+- **Drafts** are hidden from public visitors entirely. As an admin you still see the player, plus an amber badge in the top-left: *"Draft — only you can see this. Publish it to show it to visitors."* The editor preview shows the same badge while the item is a draft.
+- **Published** items are visible to everyone, subject to the **Who can watch** access rules below.
+
+::: tip
+Use a draft to stage a video — configure overlays, captions, and access — and only **Publish** once it is ready for visitors.
+:::
 
 ### Filters
 
@@ -95,14 +117,16 @@ Clicking a title (or **Edit**) opens the Media Editor. It has two parts:
 
 | Panel | Purpose |
 | --- | --- |
-| **Basic settings** | Core media options |
+| **Basic Settings** | Core media options |
 | **Appearance** | How the player looks |
+| **Overlays** | Place timed content on top of the video |
+| **Ads** | Add per-video ad breaks (requires ads enabled in [Settings → Ads](/settings/ads)) |
 | **Presets** | Apply a saved configuration ([Presets](/settings/presets)) |
 | **Chapters** | Define named sections |
 | **Captions** | Add subtitle / caption tracks |
 | **Multi-Language** | Add alternate spoken-language source versions |
-| **Branding** | Add your logo and brand styling |
-| **Timestamps** | Mark points in the timeline |
+| **Global Branding** | Add your logo and brand styling |
+| **Timestamp** | Generate a button shortcode that controls the player |
 | **Who can watch** | Access control (see below) |
 
 See [Video inspector panels](/media/video-inspector) for every field inside these panels.

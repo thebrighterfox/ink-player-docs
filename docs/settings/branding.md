@@ -6,6 +6,11 @@ description: Configure Ink Player global branding with logo watermarks, brand co
 
 Branding lets you stamp every player with your own logo and accent color so the player feels like part of your site. Branding is **on by default**.
 
+<figure>
+  <img src="/screenshots/settings/branding.png" alt="Global branding — logo, brand color, and max width">
+  <figcaption>Global branding — logo, brand color, and max width</figcaption>
+</figure>
+
 ## Enable or disable branding
 
 A master toggle sits in the **top-right of the section's card header**. Switch it off to remove all branding from your players; switch it on to apply the settings below.

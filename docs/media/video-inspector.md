@@ -8,6 +8,20 @@ The **Ink Player** video block and the dashboard **Media Editor** use the same i
 
 Most panels edit the saved media record, so changes follow the video everywhere it is used. Some panels, such as **Global Branding**, update site-wide settings.
 
+<figure>
+  <img src="/screenshots/media/video-inspector-panels.png" alt="Media editor inspector panels">
+  <figcaption>Media editor inspector panels</figcaption>
+</figure>
+
+## Publishing and drafts
+
+The Media Editor footer has two save buttons: **Save as draft** and **Publish**.
+
+- **Save as draft** stores your changes but keeps the item hidden from visitors. Public viewers see nothing; as an admin you still see the player with an amber badge in the top-left: *"Draft — only you can see this. Publish it to show it to visitors."* The live preview shows the same badge.
+- **Publish** makes the item visible to visitors, subject to the **Who can watch** rules below.
+
+Use a draft to set up overlays, captions, and access privately, then **Publish** once the video is ready.
+
 ## Basic Settings
 
 Use **Basic Settings** for the video identity and core playback behavior.
@@ -38,6 +52,11 @@ This affects the visible player container. It is useful when the player sits ins
 ## Overlays
 
 Use **Overlays** to place timed content on top of the video. Click **New overlay** to add one. Existing overlays can be enabled/disabled, edited, duplicated, or deleted from the list.
+
+<figure>
+  <img src="/screenshots/media/video-inspector-overlays.png" alt="Overlays panel in the media editor">
+  <figcaption>Overlays panel in the media editor</figcaption>
+</figure>
 
 Every overlay drawer has:
 

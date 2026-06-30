@@ -26,6 +26,11 @@ Only enable the integration for the builder you actually use. There is no need t
 
 ## Add a player in Elementor
 
+<figure>
+  <img src="/screenshots/guide/page-builders-elementor.png" alt="The Ink Player widget in the Elementor editor">
+  <figcaption>The Ink Player widget in the Elementor editor</figcaption>
+</figure>
+
 1. Edit a page with Elementor.
 2. From the widget panel, drag the **Ink Player** (or **Ink Playlist**) widget onto your layout.
 3. Use the picker to select the media or playlist you want.

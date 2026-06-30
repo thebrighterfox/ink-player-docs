@@ -23,6 +23,11 @@ Because ads are off by default, any ad breaks you set up on individual media won
 
 Global ad breaks play on **every video** on your site. Use the **Add ad** button to create one; each break opens an editor with the following options.
 
+<figure>
+  <img src="/screenshots/settings/ads-break-editor.png" alt="Ad break editor — When, Source, and Skippable">
+  <figcaption>Ad break editor — When, Source, and Skippable</figcaption>
+</figure>
+
 ### When
 
 Choose where the break plays:

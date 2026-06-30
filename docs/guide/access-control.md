@@ -8,6 +8,11 @@ Access control — labeled **"Who can watch"** on a media item — decides who i
 
 ## The three modes
 
+<figure>
+  <img src="/screenshots/guide/who-can-watch.png" alt="Who can watch — Public, Private, or Password">
+  <figcaption>Who can watch — Public, Private, or Password</figcaption>
+</figure>
+
 ### Public
 
 Anyone can watch. No sign-in and no password.
@@ -19,6 +24,10 @@ Only logged-in WordPress users can watch. Visitors who are not signed in see a *
 ### Password
 
 Viewers must enter a **password** before the media plays.
+
+::: info
+**Draft is not an access mode.** A media item or playlist set to **Draft** is hidden from every visitor regardless of its Public, Private, or Password setting — only admins and managers can see it (with a draft badge over the player), and publishing it makes it follow whatever access mode you chose. Draft controls *whether the item is live yet*; access control decides *who can watch* once it is. See [Blocks](/guide/blocks) for the Published / Draft control.
+:::
 
 ## What each provider supports
 

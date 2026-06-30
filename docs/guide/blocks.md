@@ -32,6 +32,21 @@ Select the block and open the **inspector** (the settings sidebar on the right).
 
 For a full panel-by-panel explanation of the video inspector, see [Video inspector panels](/media/video-inspector). It covers Basic Settings, Appearance, Overlays, Ads, Presets, Chapters, Captions, Multi-Language, Global Branding, Timestamp, and Who can watch.
 
+### Draft and published
+
+Pinned to the top of the inspector — directly under the block card, above the config panels — is a segmented **Published / Draft** control. It sets the block's status, which is applied to the linked media or playlist record when you save the post.
+
+While a block is set to **Draft**, the editor preview shows the player with an amber badge over its top-left corner reading "Draft — only you can see this. Publish it to show it to visitors." Public visitors see nothing at all; signed-in admins and managers still see the player and badge. Switch the control to **Published** to make it visible to everyone.
+
+<figure>
+  <img src="/screenshots/guide/block-inspector-draft.png" alt="Block inspector with the Published / Draft control at the top">
+  <figcaption>Block inspector with the Published / Draft control at the top</figcaption>
+</figure>
+
+::: info
+Status lives on the underlying record, so changing it here also changes it for the [media](/media) or [playlist](/playlists) everywhere it is placed. See [Access control](/guide/access-control) for how draft differs from who can watch.
+:::
+
 ### Switching block type
 
 Each block shows **cross-promo chips** that let you switch to a related block type — for example, swap an **Ink Player** for an **Ink Playlist** — without removing and re-adding a block.

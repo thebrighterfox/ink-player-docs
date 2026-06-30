@@ -6,34 +6,33 @@ description: Connect Mux to Ink Player for uploads, imports, public or signed pl
 
 Mux is a **Storage** integration for hosting and streaming your videos. Connect your Mux account to upload, import, and play assets directly through Ink Player.
 
-## Settings
-
-Open the Manage screen from the Mux card. Its settings are split across two tabs.
-
-### API Access
-
-Enter your Mux credentials:
-
-- **Token ID**
-- **Token Secret**
-- **Signing Key ID**
-- **Signing Private Key**
-
-### Advanced
-
-- **Video quality** — `basic`, `plus`, or `premium`.
-- **Default playback policy** — `public` or `signed`.
-- **Normalize audio** — even out loudness across your videos.
-- **Auto-generate captions** — automatically create captions, with a selectable **caption language**.
-
 ## Connecting Mux
 
+<figure>
+  <img src="/screenshots/settings/integrations/mux-connect.png" alt="Mux connection — token and signing keys">
+  <figcaption>Mux connection — token and signing keys</figcaption>
+</figure>
+
 1. Go to **Settings → Integrations** and enable **Mux** (Storage category).
-2. Click **Manage** to open the Mux settings.
-3. On the **API Access** tab, enter your Token ID, Token Secret, Signing Key ID, and Signing Private Key.
+2. Click **Manage** to open the Mux settings — they are split across two tabs.
+3. On the **API Access** tab, enter your **Access Token ID** and **Access Token Secret**. Add the **Signing Key ID** and **Signing Private Key (Base64)** only if you use signed (private) playback.
 4. On the **Advanced** tab, choose your default video quality, playback policy, and caption options.
 5. Click **Test connection** to verify your credentials.
 6. Save your settings.
+
+## Settings reference
+
+| Field | Tab | Required | Notes |
+| --- | --- | --- | --- |
+| Access Token ID | API Access | Yes | Create an API access token in the Mux dashboard (Settings → API Access Tokens). |
+| Access Token Secret | API Access | Yes | Paired with the Access Token ID. |
+| Signing Key ID | API Access | Signed playback only | Required only for signed (private) playback. |
+| Signing Private Key (Base64) | API Access | Signed playback only | Base64-encoded private key for signing. |
+| Video quality | Advanced | No | Encoding tier for new uploads and URL imports: `basic`, `plus`, or `premium`. |
+| Playback policy | Advanced | No | Default for new assets: `public` or `signed`. |
+| Normalize audio | Advanced | No | Even out loudness across your videos. |
+| Auto-generate captions | Advanced | No | Automatically create captions. |
+| Caption language | Advanced | No | Shown when auto-captions are on; defaults to auto-detect. |
 
 ## Playback policies
 

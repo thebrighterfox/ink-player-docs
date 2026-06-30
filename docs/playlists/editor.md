@@ -6,9 +6,14 @@ description: Complete user guide for the Ink Player playlist editor, including c
 
 The **Playlist Editor** is where you build an ordered video or audio collection and configure how that playlist behaves when published. A playlist uses existing [Media](/media) records, so updates to a media item automatically appear anywhere that playlist is embedded.
 
+<figure>
+  <img src="/screenshots/playlists/editor.png" alt="Playlist editor with items and layout">
+  <figcaption>Playlist editor with items and layout</figcaption>
+</figure>
+
 ## Create a playlist
 
-1. Go to **Ink Player -> Playlists**.
+1. Go to **Ink Player → Playlists**.
 2. Click **Add playlist**.
 3. Choose **Video playlist** or **Audio playlist**.
 4. Add media from the library or import a supported external playlist.
@@ -25,13 +30,16 @@ Use the top editor area to manage the playlist record.
 | **Title** | Sets the playlist name shown in the admin and used to identify the playlist later. |
 | **Type** | Shows whether the playlist is a video playlist or audio playlist. |
 | **Items** | Shows the media records included in the playlist. |
-| **Save** | Stores the playlist content and configuration. |
+| **Save as draft** | Stores the playlist but keeps it hidden from visitors. |
+| **Publish** | Stores the playlist and makes it visible to visitors. |
+
+The **Save as draft** and **Publish** buttons sit in the editor header. Both stay **disabled until you add at least one item** — an empty playlist cannot be saved.
 
 Rename playlists clearly when you have many collections, such as course modules, episode seasons, product demos, sermons, lessons, or music albums.
 
 ## Add items from the media library
 
-Use the media picker when the items already exist in **Ink Player -> Media**.
+Use the media picker when the items already exist in **Ink Player → Media**.
 
 1. Click the add/select media control in the playlist editor.
 2. Search or scroll through the media library.
@@ -67,20 +75,26 @@ Removing an item from a playlist does not delete the underlying media record fro
 
 ## Configure the player
 
-Video playlists and audio playlists expose the relevant player settings for that playlist type. The exact options depend on the selected media type and layout, but common controls include:
+The inspector exposes a small set of playlist-level settings. Per-item options such as appearance, autoplay, and loop live on each media record, not on the playlist.
 
-| Area | What it controls |
+| Panel | What it controls |
 | --- | --- |
-| **Playback behavior** | Autoplay, loop, muted playback, inline playback, and related player behavior. |
-| **Appearance** | Player shape, list placement, spacing, and visual fit. |
-| **Layout** | How the playlist list appears around the player. See [Playlist layouts](/playlists/layouts). |
-| **Access control** | Who can watch or listen. See [Access control](/guide/access-control). |
+| **Basic Settings** | **Auto-play next** (start the next item when one ends), **Shuffle** (random order), and **Repeat** (No repeat, Repeat one, or Repeat all). |
+| **Layout** | How the item list appears around the player — **List**, **Grid**, or **Slider**. See [Playlist layouts](/playlists/layouts). |
+| **Who can watch** | Playlist access — **Public** or **Private** only. See [Access control](/guide/access-control). |
 
 For detailed per-video controls such as captions, chapters, overlays, ads, presets, branding, timestamps, and multi-language versions, edit the individual item in [Media](/media).
 
 ## Publish a playlist
 
-Copy the shortcode from the Playlists table:
+A playlist is **published** or a **draft**, chosen with the editor's footer buttons:
+
+- **Save as draft** stores the playlist but keeps it hidden from visitors. As an admin you still see the player with an amber badge: *"Draft — only you can see this. Publish it to show it to visitors."*
+- **Publish** makes the playlist visible to visitors, subject to its **Who can watch** setting.
+
+Both buttons are disabled until the playlist has at least one item.
+
+Once published, embed the playlist anywhere. Copy the shortcode from the Playlists table:
 
 ```text
 [ink_playlist id="N"]
@@ -88,7 +102,7 @@ Copy the shortcode from the Playlists table:
 
 Replace `N` with the playlist ID.
 
-You can also publish playlists with:
+You can also insert playlists with:
 
 - **Ink Playlist** block for video playlists.
 - **Ink Audio Playlist** block for audio playlists.

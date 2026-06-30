@@ -12,6 +12,11 @@ This is different from captions. Captions add translated text tracks; multi-lang
 
 When a video has language versions, Ink Player shows a small language pill in the top-right of the player. Viewers can open it and choose another language.
 
+<figure>
+  <img src="/screenshots/media/multi-language-pill.png" alt="Language switcher pill on the player">
+  <figcaption>Language switcher pill on the player</figcaption>
+</figure>
+
 When a language is selected, the player:
 
 - Swaps to that language's media source.
@@ -24,6 +29,11 @@ On first load, Ink Player checks the viewer's browser language. If a matching la
 ## Add language versions
 
 You can add language versions from either the dashboard media editor or the Gutenberg block inspector.
+
+<figure>
+  <img src="/screenshots/media/multi-language-panel.png" alt="Language versions in the media editor">
+  <figcaption>Language versions in the media editor</figcaption>
+</figure>
 
 ### In the Media editor
 
@@ -59,6 +69,8 @@ Example:
 This keeps the switcher label aligned with what is already playing before a viewer makes a choice.
 
 ## Source requirements
+
+Each language's **Source** accepts a video *or* an audio file, so a language version can point to a dubbed audio-only track as well as a full video.
 
 Each language needs its own playable source URL. Use sources that match the same viewing experience as closely as possible:
 

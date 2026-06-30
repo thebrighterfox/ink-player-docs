@@ -6,9 +6,21 @@ description: Capture, review, export, and deliver viewer leads from Ink Player e
 
 **Leads** (`/leads`) collects email addresses from people watching your players, so you can grow your list and feed contacts into your email or CRM tools.
 
+<figure>
+  <img src="/screenshots/leads/table.png" alt="Leads table with email, source, and date">
+  <figcaption>Leads table with email, source, and date</figcaption>
+</figure>
+
 ## How leads are captured
 
 An **email-gate overlay** can require viewers to enter their email address to keep watching. When a viewer submits their email, it becomes a lead.
+
+<figure>
+  <img src="/screenshots/leads/email-gate.png" alt="Email-gate overlay shown on a player">
+  <figcaption>Email-gate overlay shown on a player</figcaption>
+</figure>
+
+Leads are deduped by email — if the same address is captured again, the existing lead is updated rather than added as a duplicate row.
 
 ## The leads table
 
