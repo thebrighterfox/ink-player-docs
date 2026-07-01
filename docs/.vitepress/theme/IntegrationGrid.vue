@@ -49,7 +49,7 @@ const integrations = [
 .ig-card:hover {
     border-color: var(--vp-c-brand-1);
     transform: translateY(-2px);
-    box-shadow: 0 10px 24px -16px rgba(91, 84, 236, 0.5);
+    box-shadow: 0 10px 24px -16px rgba(20, 184, 138, 0.5);
 }
 .ig-card__logo {
     flex: none;
