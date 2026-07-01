@@ -4,16 +4,17 @@
    ============================================================ */
 
 :root {
-  /* Brand — Ink Player indigo */
-  --vp-c-brand-1: #5b54ec;       /* default / button initial */
-  --vp-c-brand-2: #4f46e5;       /* hover */
-  --vp-c-brand-3: #4338ca;       /* pressed / active */
-  --vp-c-brand-soft: rgba(91, 84, 236, 0.12);
+  /* Brand — Ink Player teal. brand-1 is a darker teal so links/active text
+     stay readable on white; the vivid accent lives in the hero + button hover. */
+  --vp-c-brand-1: #0f7d61;       /* default / links / active text */
+  --vp-c-brand-2: #16ab84;       /* hover */
+  --vp-c-brand-3: #0b6650;       /* pressed / active */
+  --vp-c-brand-soft: rgba(41, 227, 178, 0.14);
 
   /* Home hero gradient (default layout: home) */
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: linear-gradient(120deg, #6d5efc 25%, #a855f7);
-  --vp-home-hero-image-background-image: linear-gradient(120deg, #6d5efc 30%, #a855f7);
+  --vp-home-hero-name-background: linear-gradient(120deg, #29E3B2 25%, #14b8a6);
+  --vp-home-hero-image-background-image: linear-gradient(120deg, #29E3B2 30%, #0d9488);
   --vp-home-hero-image-filter: blur(56px);
 
   --vp-button-brand-bg: var(--vp-c-brand-1);
@@ -28,10 +29,10 @@
 }
 
 .dark {
-  --vp-c-brand-1: #8b84ff;
-  --vp-c-brand-2: #7c74f5;
-  --vp-c-brand-3: #6d5efc;
-  --vp-c-brand-soft: rgba(124, 116, 245, 0.16);
+  --vp-c-brand-1: #34e6b8;
+  --vp-c-brand-2: #6ee7c7;
+  --vp-c-brand-3: #1ec297;
+  --vp-c-brand-soft: rgba(41, 227, 178, 0.18);
 }
 
 /* ---------- Navbar ---------- */
@@ -49,6 +50,13 @@
 }
 .VPNavBar.has-sidebar .title {
   border-bottom: 1px solid var(--vp-c-divider) !important;
+}
+
+/* Divider before the external "Website" link (last nav item) */
+.VPNavBarMenu .VPNavBarMenuLink:last-child {
+  margin-left: 4px;
+  padding-left: 16px;
+  border-left: 1px solid var(--vp-c-divider);
 }
 
 /* ============================================================
@@ -169,7 +177,7 @@
 .VPFeatures .VPFeature:hover {
   border-color: var(--vp-c-brand-1);
   transform: translateY(-3px);
-  box-shadow: 0 12px 30px -16px rgba(91, 84, 236, 0.45);
+  box-shadow: 0 12px 30px -16px rgba(20, 184, 138, 0.45);
 }
 .VPFeature .icon {
   background: var(--vp-c-brand-soft) !important;

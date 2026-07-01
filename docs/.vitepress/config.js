@@ -7,7 +7,8 @@ export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
   head: [
-    ['meta', { name: 'theme-color', content: '#5b54ec' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+    ['meta', { name: 'theme-color', content: '#29E3B2' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'Ink Player Docs' }],
     ['meta', { property: 'og:title', content: 'Ink Player Documentation' }],
@@ -17,15 +18,40 @@ export default defineConfig({
     ['meta', { name: 'twitter:description', content: 'Guides for building branded WordPress video and audio experiences with Ink Player.' }],
   ],
   themeConfig: {
+    logo: { light: '/logo-light.svg', dark: '/logo-dark.svg' },
     siteTitle: 'Ink Player',
     nav: [
       { text: 'Guide', link: '/guide/getting-started', activeMatch: '/guide/' },
-      { text: 'Dashboard', link: '/dashboard' },
-      { text: 'Media', link: '/media', activeMatch: '/media' },
-      { text: 'Playlists', link: '/playlists', activeMatch: '/playlists' },
-      { text: 'Analytics', link: '/analytics' },
-      { text: 'Settings', link: '/settings', activeMatch: '/settings' },
+      {
+        text: 'Dashboard',
+        activeMatch: '/(dashboard|media|playlists|analytics|leads|settings)',
+        items: [
+          { text: 'Overview', link: '/dashboard' },
+          {
+            text: 'Library',
+            items: [
+              { text: 'Media', link: '/media' },
+              { text: 'Playlists', link: '/playlists' },
+            ],
+          },
+          {
+            text: 'Insights',
+            items: [
+              { text: 'Analytics', link: '/analytics' },
+              { text: 'Leads', link: '/leads' },
+            ],
+          },
+          {
+            text: 'Configure',
+            items: [
+              { text: 'Settings', link: '/settings' },
+              { text: 'Integrations', link: '/settings/integrations' },
+            ],
+          },
+        ],
+      },
       { text: 'Changelog', link: '/changelog' },
+      { text: 'Website', link: 'https://inkplayer.com' },
     ],
     sidebar: {
       '/dashboard': [

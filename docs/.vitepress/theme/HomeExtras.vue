@@ -7,9 +7,9 @@
                 <a class="ink-strip__all" href="/settings/integrations">All integrations →</a>
             </div>
             <div class="ink-strip__logos">
-                <span v-for="l in logos" :key="l.src" class="ink-logo" :title="l.alt">
+                <a v-for="l in logos" :key="l.src" :href="l.link" class="ink-logo" :title="l.alt">
                     <img :src="l.src" :alt="l.alt"/>
-                </span>
+                </a>
             </div>
         </section>
 
@@ -61,18 +61,18 @@
 
 <script setup>
 const logos = [
-    {src: '/logos/youtube.svg', alt: 'YouTube'},
-    {src: '/logos/vimeo.svg', alt: 'Vimeo'},
-    {src: '/logos/bunnynet.svg', alt: 'Bunny.net'},
-    {src: '/logos/mux.png', alt: 'Mux'},
-    {src: '/logos/mailchimp.png', alt: 'Mailchimp'},
-    {src: '/logos/mailerlite.webp', alt: 'MailerLite'},
-    {src: '/logos/activecampaign.png', alt: 'ActiveCampaign'},
-    {src: '/logos/fluentcrm.svg', alt: 'FluentCRM'},
-    {src: '/logos/woocommerce.svg', alt: 'WooCommerce'},
-    {src: '/logos/elementor.gif', alt: 'Elementor'},
-    {src: '/logos/beaver.png', alt: 'Beaver Builder'},
-    {src: '/logos/google_analytics.svg', alt: 'Google Analytics'},
+    {src: '/logos/youtube.svg', alt: 'YouTube', link: '/settings/integrations/youtube'},
+    {src: '/logos/vimeo.svg', alt: 'Vimeo', link: '/settings/integrations/vimeo'},
+    {src: '/logos/bunnynet.svg', alt: 'Bunny.net', link: '/settings/integrations/bunny-net'},
+    {src: '/logos/mux.png', alt: 'Mux', link: '/settings/integrations/mux'},
+    {src: '/logos/mailchimp.png', alt: 'Mailchimp', link: '/settings/integrations/mailchimp'},
+    {src: '/logos/mailerlite.webp', alt: 'MailerLite', link: '/settings/integrations/mailerlite'},
+    {src: '/logos/activecampaign.png', alt: 'ActiveCampaign', link: '/settings/integrations/activecampaign'},
+    {src: '/logos/fluentcrm.svg', alt: 'FluentCRM', link: '/settings/integrations/fluentcrm'},
+    {src: '/logos/woocommerce.svg', alt: 'WooCommerce', link: '/settings/integrations/woocommerce'},
+    {src: '/logos/elementor.gif', alt: 'Elementor', link: '/settings/integrations/elementor'},
+    {src: '/logos/beaver.png', alt: 'Beaver Builder', link: '/settings/integrations/beaver-builder'},
+    {src: '/logos/google_analytics.svg', alt: 'Google Analytics', link: '/settings/integrations/google-analytics'},
 ]
 
 const columns = [
@@ -83,7 +83,7 @@ const columns = [
             {label: 'Getting Started', desc: 'Add your first video in minutes', link: '/guide/getting-started'},
             {label: 'Blocks', desc: 'The four Gutenberg blocks', link: '/guide/blocks'},
             {label: 'Shortcodes', desc: '[ink_player] and [ink_playlist]', link: '/guide/shortcodes'},
-            {label: 'Multi-Language', desc: 'Alternate spoken-language sources', link: '/guide/multi-language'},
+            {label: 'Multi-Language', desc: 'Alternate spoken-language sources', link: '/media/multi-language'},
         ],
     },
     {
@@ -163,6 +163,7 @@ const workflow = [
     border-radius: 8px;
     background: var(--vp-c-bg);
     border: 1px solid var(--vp-c-border);
+    text-decoration: none !important;
     transition: transform .15s ease, border-color .15s ease;
 }
 .ink-logo:hover { transform: translateY(-2px); border-color: var(--vp-c-brand-1); }
@@ -217,7 +218,7 @@ const workflow = [
 .ink-step:hover {
     border-color: var(--vp-c-brand-1);
     transform: translateY(-1px);
-    box-shadow: 0 10px 24px -18px rgba(91, 84, 236, .55);
+    box-shadow: 0 10px 24px -18px rgba(20, 184, 138, .55);
 }
 .ink-step__num {
     flex: none;
