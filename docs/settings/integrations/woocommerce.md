@@ -1,20 +1,17 @@
 ---
-description: Display Ink Player media or playlists on WooCommerce product pages for demos, walkthroughs, and samples.
+description: Display Ink Player media or playlists on WooCommerce product pages for demos, walkthroughs, and gated premium content.
 ---
 
 # WooCommerce
 
-WooCommerce is the e-commerce plugin for WordPress. With this integration enabled, you can display an Ink Player video or audio on your WooCommerce product pages — ideal for product demos, walkthroughs, and audio samples that help shoppers decide.
-
-<figure>
-  <img src="/screenshots/settings/integrations/woocommerce.png" alt="Ink Player media on a WooCommerce product">
-  <figcaption>Ink Player media on a WooCommerce product</figcaption>
-</figure>
+WooCommerce is the e-commerce plugin for WordPress. With this integration enabled, every product gains an **Ink Player** tab where you can attach a [media](/media) item or [playlist](/playlists), choose where it appears on the product page, and control who can watch it — from open demos to purchasers-only premium content.
 
 ## What this integration does
 
-- Lets you place an Ink Player [media](/media) item on WooCommerce product content.
-- Brings video and audio demos directly onto the product page.
+- Adds an **Ink Player** tab to the WooCommerce **Product data** panel.
+- Attaches a [media](/media) item or a whole [playlist](/playlists) to any product.
+- Lets you pick where the player appears — before the short description, after the description, or in its own product tab.
+- Gates playback by visibility: everyone, logged-in users, or purchasers only.
 
 ## How to enable
 
@@ -22,18 +19,47 @@ WooCommerce is the e-commerce plugin for WordPress. With this integration enable
 2. Go to **Settings → [Integrations](/settings/integrations)**.
 3. Find the **WooCommerce** card under the **E-commerce** category.
 4. Click **Enable**.
-5. Edit a product, then add an Ink Player to the product content where you want the demo to appear.
+5. Edit any product and open the **Ink Player** tab in the **Product data** panel.
 
-## Usage reference
+## The Ink Player product tab
 
-| Step | Where | Notes |
-| --- | --- | --- |
-| Enable | Settings → Integrations → WooCommerce | No credentials; just toggle on while WooCommerce is active. |
-| Attach media | Edit a product | Add an Ink Player [media](/media) item or [playlist](/playlists) to the product content. |
-| Display | Product page | The player renders for shoppers on the front end. |
+<figure>
+  <img src="/screenshots/settings/integrations/woocommerce/woocommerce.png" alt="The Ink Player tab in the WooCommerce Product data panel">
+  <figcaption>The Ink Player tab in the WooCommerce Product data panel</figcaption>
+</figure>
+
+| Field | What it does |
+| --- | --- |
+| **Content type** | Choose **Media** for a single item or **Playlist** for a collection. |
+| **Content** | Search and pick the [media](/media) or [playlist](/playlists) to display. Use **+** to create a new one or the **pencil** to edit the selected item. |
+| **Display location** | Where the player renders: **Before short description**, **After description**, or **Custom product tab**. |
+| **Custom tab name** | Only shown when the location is **Custom product tab** — names the tab on the product page (e.g. `Playlist`). |
+| **Visibility** | Who can watch — see [Visibility](#visibility) below. |
+
+## Visibility
+
+| Option | Who can watch |
+| --- | --- |
+| **Everyone** | All visitors. The content uses its own [privacy](/media) settings. |
+| **Logged-in users** | Only signed-in users; everyone else sees a sign-in prompt. |
+| **Purchasers only** | Only customers who have bought this product. Others see a purchase prompt. |
+
+When a visitor isn't allowed to watch, the player shows a lock screen in place of the content instead of the video or playlist.
+
+<figure>
+  <img src="/screenshots/settings/integrations/woocommerce/premium-playlist.png" alt="A playlist set to a custom product tab with purchasers-only visibility">
+  <figcaption>A playlist shown in a custom tab, gated to purchasers only</figcaption>
+</figure>
+
+On the product page, the playlist appears in its named tab. Because it's set to **Purchasers only**, a visitor who hasn't bought the product sees a lock screen prompting them to log in or buy — while paying customers get full playback.
+
+<figure>
+  <img src="/screenshots/settings/integrations/woocommerce/premium-playlist-preview.png" alt="Front-end product page with a purchasers-only playlist lock screen">
+  <figcaption>The purchasers-only lock screen on the front-end product page</figcaption>
+</figure>
 
 ::: tip
-Use a short product demo or audio sample on the product page to give shoppers a clearer sense of what they're buying.
+For a paid course or premium content, attach a [playlist](/playlists), display it in a **Custom product tab**, and set visibility to **Purchasers only** — buyers get the full playlist right on the product page.
 :::
 
 ## Requirements
@@ -45,3 +71,4 @@ Use a short product demo or audio sample on the product page to give shoppers a 
 
 - If the WooCommerce card is missing or greyed out, confirm the WooCommerce plugin is active.
 - You can reuse any existing [media](/media) item or [playlist](/playlists) on a product page.
+- **Purchasers only** unlocks once the customer's order is **completed** — a paid-but-unfulfilled order does not grant access.

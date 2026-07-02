@@ -32,7 +32,7 @@ Every tab shares two controls:
 
 ## Tabs
 
-Analytics is organized into four tabs: **Overview**, **Media**, **Audience**, and **Real-time**.
+Analytics is organized into three tabs: **Overview**, **Media** and **Audience**
 
 ### Overview
 

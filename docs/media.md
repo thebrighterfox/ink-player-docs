@@ -80,7 +80,7 @@ Select multiple rows to enable **bulk delete**.
 
 ## Draft and published media
 
-Every media item is either **published** or a **draft**. In the Media Editor, the footer has two buttons — **Save as draft** and **Publish** — so you choose the state as you save.
+Every media item is either **published** or a **draft**. In the Media Editor, the header has two buttons — **Save as draft** and **Publish** — so you choose the state as you save.
 
 <figure>
   <img src="/screenshots/media/editor-draft-badge.png" alt="Media editor preview showing the draft badge">
