@@ -264,7 +264,9 @@
 
 /* Screenshots */
 .vp-doc img { border-radius: 8px; }
-.vp-doc figure { margin: 12px 0 24px; position: relative; }
+/* Shrink-wrap the image so the zoom icon anchors to the image's corner at any
+   size (table-caption keeps the caption from widening the figure). */
+.vp-doc figure { margin: 12px 0 24px; position: relative; display: table; max-width: 100%; }
 .vp-doc figure img {
   border: 1px solid var(--vp-c-divider);
   box-shadow: 0 4px 12px rgba(15, 18, 40, 0.06);
@@ -315,6 +317,8 @@
   box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
 }
 .vp-doc figure figcaption {
+  display: table-caption;
+  caption-side: bottom;
   margin-top: 8px;
   font-size: 13px;
   color: var(--vp-c-text-3);
