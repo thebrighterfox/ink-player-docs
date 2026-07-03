@@ -14,68 +14,155 @@ YouTube is a **Playlist** integration. Enable it to import a YouTube **playlist*
 
 ## Prerequisites
 
-- **None** for playlists of 100 videos or fewer.
-- For larger playlists, a **YouTube Data API v3** key (see Step 1).
+- **None** for playlists of 100 videos or fewer — skip straight to [Connect and import](#connect-and-import).
+- For larger playlists, a **YouTube Data API v3** key — create one in the [Google Cloud Console](https://console.cloud.google.com/) as shown below.
 
-## Step 1 — Get an API key (optional)
+## Get a YouTube Data API key (optional)
 
-Only needed to import playlists with **more than 100 videos**. Skip this for smaller playlists.
+Only needed to import playlists with **more than 100 videos**. If yours are smaller, skip this section.
 
-1. Open the **[Google Cloud Console](https://console.cloud.google.com/)** and select or create a project.
-2. Enable the **YouTube Data API v3** for that project.
-3. Under **APIs & Services → Credentials**, create an **API key** and copy it.
+<div class="ink-timeline">
 
-<!-- SCREENSHOT: The Google Cloud Console Credentials page showing the created YouTube Data API v3 API key. -->
+## Step 1 — Open the Google Cloud Console
+
+Sign in at **[console.cloud.google.com](https://console.cloud.google.com/)**. On the welcome screen, click **Select a project** (or **Create or select a project**).
+
 <figure>
-  <img src="/screenshots/settings/integrations/youtube/api-key-google.png" alt="A YouTube Data API v3 key in the Google Cloud Console">
-  <figcaption>Create a YouTube Data API v3 key in the Google Cloud Console</figcaption>
+  <img src="/screenshots/settings/integrations/youtube/google-cloud-console.png" alt="The Google Cloud Console welcome screen">
+  <figcaption>Open the Google Cloud Console and click Select a project</figcaption>
 </figure>
 
-## Step 2 — Enable and connect
+## Step 2 — Create a project
+
+In the project picker, click **New project**, give it a name, and click **Create**.
+
+<figure>
+  <img src="/screenshots/settings/integrations/youtube/select-project-dialog.png" alt="The Google Cloud project picker dialog">
+  <figcaption>The project picker opens</figcaption>
+</figure>
+
+<figure>
+  <img src="/screenshots/settings/integrations/youtube/create-new-project.png" alt="The New project button in the project picker">
+  <figcaption>Click New project</figcaption>
+</figure>
+
+<figure>
+  <img src="/screenshots/settings/integrations/youtube/project-page.png" alt="The New Project form with a name field">
+  <figcaption>Name the project and click Create</figcaption>
+</figure>
+
+## Step 3 — Select your project
+
+Once it's created, open the notification (or the **Select a project** menu) and switch to your new project.
+
+<figure>
+  <img src="/screenshots/settings/integrations/youtube/select-project.png" alt="Selecting the newly created project">
+  <figcaption>Select your new project</figcaption>
+</figure>
+
+## Step 4 — Open APIs & Services
+
+From the project dashboard, open **APIs & Services**, then click **Enable APIs and services**.
+
+<figure>
+  <img src="/screenshots/settings/integrations/youtube/api-services.png" alt="The APIs & Services quick-access card">
+  <figcaption>Open APIs & Services</figcaption>
+</figure>
+
+<figure>
+  <img src="/screenshots/settings/integrations/youtube/enable-api-services.png" alt="The Enable APIs and services button">
+  <figcaption>Click Enable APIs and services</figcaption>
+</figure>
+
+## Step 5 — Enable the YouTube Data API v3
+
+In the API Library, search for **YouTube Data API v3**, open it, and click **Enable**.
+
+<figure>
+  <img src="/screenshots/settings/integrations/youtube/search-data-api.png" alt="Searching the API Library for the YouTube Data API">
+  <figcaption>Search for “youtube data api v3”</figcaption>
+</figure>
+
+<figure>
+  <img src="/screenshots/settings/integrations/youtube/select-youtube-data-api-v3.png" alt="The YouTube Data API v3 result">
+  <figcaption>Open the YouTube Data API v3</figcaption>
+</figure>
+
+<figure>
+  <img src="/screenshots/settings/integrations/youtube/enable-api.png" alt="The Enable button on the YouTube Data API v3 page">
+  <figcaption>Click Enable</figcaption>
+</figure>
+
+## Step 6 — Create an API key
+
+Go to **Credentials → Create credentials → API key**. Name the key and, under **API restrictions**, restrict it to **YouTube Data API v3**, then click **Create**.
+
+<figure>
+  <img src="/screenshots/settings/integrations/youtube/create-api-key.png" alt="Create credentials → API key menu">
+  <figcaption>Create credentials → API key</figcaption>
+</figure>
+
+<figure>
+  <img src="/screenshots/settings/integrations/youtube/create-api-key-drawer.png" alt="The Create API key drawer with API restrictions">
+  <figcaption>Restrict the key to the YouTube Data API v3</figcaption>
+</figure>
+
+<figure>
+  <img src="/screenshots/settings/integrations/youtube/create-btn.png" alt="The Create button in the API key form">
+  <figcaption>Click Create</figcaption>
+</figure>
+
+## Step 7 — Copy your API key
+
+Copy the generated key — you'll paste it into Ink Player next.
+
+<figure>
+  <img src="/screenshots/settings/integrations/youtube/api-key-created.png" alt="The API key created dialog">
+  <figcaption>Copy your new API key</figcaption>
+</figure>
+
+</div>
+
+::: warning
+Keep your API key private, and restrict it to the **YouTube Data API v3** (as above) to limit its use.
+:::
+
+## Connect and import
+
+<div class="ink-timeline">
+
+## Step 1 — Enable and connect
 
 1. Go to **Settings → [Integrations](/settings/integrations)** and enable **YouTube** (under the **Playlist** category).
 2. Click **Manage**.
 3. (Optional) Paste your **API Key** — only needed for playlists over 100 videos.
 4. Click **Send test** to confirm the key reaches the YouTube Data API, then **Save**.
 
-<!-- SCREENSHOT: The YouTube settings panel in Ink Player — the API Key field, with the Send test and Save buttons. -->
 <figure>
   <img src="/screenshots/settings/integrations/youtube/connect.png" alt="The YouTube integration settings with the API Key field">
-  <figcaption>Optionally add your API key, then save</figcaption>
+  <figcaption>Optionally add your API key, test, and save</figcaption>
 </figure>
 
-::: tip
-You can skip the key entirely for playlists of 100 videos or fewer — the import still works.
-:::
+## Step 2 — Import a playlist
 
-## Step 3 — Import a playlist
+1. Go to **[Playlists](/playlists)**, click **Add playlist**, and choose **Ink Playlist**.
+2. Paste your **YouTube playlist URL** and submit with the **→** arrow — or click **YouTube Playlist** under **Import from**.
 
-1. Go to **[Playlists](/playlists)** and start a **new playlist**.
-2. In the dialog, under **Import from**, paste your **YouTube playlist URL** and submit.
-
-<!-- SCREENSHOT: The Add Playlist dialog with the "Paste YouTube or Vimeo playlist URL" field and the "Import from → YouTube Playlist" option. -->
 <figure>
-  <img src="/screenshots/settings/integrations/youtube/import-url.png" alt="The Add Playlist dialog with a YouTube playlist URL pasted">
-  <figcaption>Paste the YouTube playlist URL in the new-playlist dialog</figcaption>
+  <img src="/screenshots/settings/integrations/youtube/playlist-block.png" alt="The new-playlist dialog with a YouTube playlist URL and the Import from options">
+  <figcaption>Paste the YouTube playlist URL, or pick YouTube Playlist under Import from</figcaption>
 </figure>
 
-3. Ink Player enumerates the playlist. **Choose which videos to add**, then confirm.
+3. Ink Player enumerates the playlist. Tick the videos you want (or **Select All**), then click **Add to Playlist**.
 
-<!-- SCREENSHOT: The item picker listing the enumerated YouTube playlist videos with selectable checkboxes. -->
 <figure>
-  <img src="/screenshots/settings/integrations/youtube/select-videos.png" alt="Selecting videos from the enumerated YouTube playlist">
-  <figcaption>Pick which videos from the playlist to import</figcaption>
+  <img src="/screenshots/settings/integrations/youtube/playlist-import-dialog.png" alt="The Import from YouTube dialog listing the playlist's videos with checkboxes">
+  <figcaption>Select the videos to import, then Add to Playlist</figcaption>
 </figure>
 
-## Step 4 — The playlist is created
+4. The videos open in the **playlist editor**, where you can reorder, set auto-play, and **Save**.
 
-The selected videos become an Ink Player [playlist](/playlists), ready to edit or embed — each video playing through YouTube's embed.
-
-<!-- SCREENSHOT: The resulting Ink Player playlist (playlist editor or a rendered playlist player) built from the imported YouTube videos. -->
-<figure>
-  <img src="/screenshots/settings/integrations/youtube/playlist.png" alt="An Ink Player playlist built from an imported YouTube playlist">
-  <figcaption>The imported videos as an Ink Player playlist</figcaption>
-</figure>
+</div>
 
 ## Settings reference
 
