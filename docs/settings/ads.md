@@ -8,6 +8,11 @@ Ink Player can play **linear video ads** — a separate ad clip that interrupts 
 
 Ads are **off by default**.
 
+<figure>
+  <img src="/screenshots/settings/adds/ads-break-editor.png" alt="The Ads settings page — master toggle, global ads, and embed toggles">
+  <figcaption>The Ads settings page: the master toggle, global ad breaks, and the embedded-player toggles</figcaption>
+</figure>
+
 ## Enable ads
 
 A master toggle sits in the **top-right of the section header**. It is a complete kill-switch:
@@ -21,11 +26,11 @@ Because ads are off by default, any ad breaks you set up on individual media won
 
 ## Global ads
 
-Global ad breaks play on **every video** on your site. Use the **Add ad** button to create one; each break opens an editor with the following options.
+Global ad breaks play on **every video** on your site. Use the **Add ad** button to create one; each break opens the **Add ad break** panel with the following options.
 
 <figure>
-  <img src="/screenshots/settings/ads-break-editor.png" alt="Ad break editor — When, Source, and Skippable">
-  <figcaption>Ad break editor — When, Source, and Skippable</figcaption>
+  <img src="/screenshots/settings/adds/vast-add.png" alt="The Add ad break panel — When, Source, and the VAST tag URL">
+  <figcaption>The Add ad break panel — set When, choose a Source, and (for VAST) paste the tag URL</figcaption>
 </figure>
 
 ### When
@@ -42,9 +47,24 @@ Choose where the break plays:
 - **Custom video** — your own ad clip. Provide the ad's video URL, an optional click-through URL, and whether it's skippable.
 - **VAST tag** — a VAST/VMAP tag URL from an ad server such as Google Ad Manager.
 
+<figure>
+  <img src="/screenshots/settings/adds/vast-add-preview.png" alt="A VAST ad served through Google Ad Manager playing in the player">
+  <figcaption>A VAST tag ad served through Google Ad Manager</figcaption>
+</figure>
+
 ### Skippable & Skip after
 
-For custom ads you can let viewers skip the ad after a number of seconds. Turn **Skippable** on and set **Skip after** to the delay before the *Skip* button appears.
+For custom ads you can let viewers skip the ad after a number of seconds. Turn **Skippable** on and set **Skip after** to the delay before the *Skip* button appears. Until then, viewers see a countdown; once it elapses, the *Skip Ad* button appears.
+
+<figure>
+  <img src="/screenshots/settings/adds/custom-add-preview.png" alt="A custom ad playing with a Skip in 5 countdown">
+  <figcaption>Before the delay elapses — a countdown (“Skip in 5”)</figcaption>
+</figure>
+
+<figure>
+  <img src="/screenshots/settings/adds/custom-add-skip-button-enable.png" alt="A custom ad playing with the Skip Ad button available">
+  <figcaption>After the delay — the Skip Ad button appears</figcaption>
+</figure>
 
 ::: tip
 A video's own pre-roll takes priority over the global pre-roll — if a specific video already has a pre-roll of its own, the global pre-roll is skipped for that video so viewers never see two pre-rolls back to back. Mid-roll and post-roll breaks stack normally.
