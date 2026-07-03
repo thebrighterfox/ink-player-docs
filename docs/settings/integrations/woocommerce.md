@@ -13,15 +13,17 @@ WooCommerce is the e-commerce plugin for WordPress. With this integration enable
 - Lets you pick where the player appears — before the short description, after the description, or in its own product tab.
 - Gates playback by visibility: everyone, logged-in users, or purchasers only.
 
-## How to enable
+<div class="ink-timeline">
+
+## Step 1 — Enable the integration
 
 1. Make sure the **WooCommerce** plugin is installed and active on your site.
 2. Go to **Settings → [Integrations](/settings/integrations)**.
-3. Find the **WooCommerce** card under the **E-commerce** category.
-4. Click **Enable**.
-5. Edit any product and open the **Ink Player** tab in the **Product data** panel.
+3. Find the **WooCommerce** card under the **E-commerce** category and click **Enable**.
 
-## The Ink Player product tab
+## Step 2 — Add Ink Player to a product
+
+Edit any product and open the **Ink Player** tab in the **Product data** panel. Pick the content and where it should appear.
 
 <figure>
   <img src="/screenshots/settings/integrations/woocommerce/woocommerce.png" alt="The Ink Player tab in the WooCommerce Product data panel">
@@ -34,9 +36,11 @@ WooCommerce is the e-commerce plugin for WordPress. With this integration enable
 | **Content** | Search and pick the [media](/media) or [playlist](/playlists) to display. Use **+** to create a new one or the **pencil** to edit the selected item. |
 | **Display location** | Where the player renders: **Before short description**, **After description**, or **Custom product tab**. |
 | **Custom tab name** | Only shown when the location is **Custom product tab** — names the tab on the product page (e.g. `Playlist`). |
-| **Visibility** | Who can watch — see [Visibility](#visibility) below. |
+| **Visibility** | Who can watch — see the next step. |
 
-## Visibility
+## Step 3 — Set who can watch
+
+Use the **Visibility** field to control access:
 
 | Option | Who can watch |
 | --- | --- |
@@ -44,19 +48,23 @@ WooCommerce is the e-commerce plugin for WordPress. With this integration enable
 | **Logged-in users** | Only signed-in users; everyone else sees a sign-in prompt. |
 | **Purchasers only** | Only customers who have bought this product. Others see a purchase prompt. |
 
-When a visitor isn't allowed to watch, the player shows a lock screen in place of the content instead of the video or playlist.
+When a visitor isn't allowed to watch, the player shows a lock screen in place of the content.
 
 <figure>
   <img src="/screenshots/settings/integrations/woocommerce/premium-playlist.png" alt="A playlist set to a custom product tab with purchasers-only visibility">
   <figcaption>A playlist shown in a custom tab, gated to purchasers only</figcaption>
 </figure>
 
-On the product page, the playlist appears in its named tab. Because it's set to **Purchasers only**, a visitor who hasn't bought the product sees a lock screen prompting them to log in or buy — while paying customers get full playback.
+## Step 4 — See it on the product page
+
+The player renders in your chosen location. With **Purchasers only**, a visitor who hasn't bought the product sees a lock screen prompting them to log in or buy — while paying customers get full playback.
 
 <figure>
   <img src="/screenshots/settings/integrations/woocommerce/premium-playlist-preview.png" alt="Front-end product page with a purchasers-only playlist lock screen">
   <figcaption>The purchasers-only lock screen on the front-end product page</figcaption>
 </figure>
+
+</div>
 
 ::: tip
 For a paid course or premium content, attach a [playlist](/playlists), display it in a **Custom product tab**, and set visibility to **Purchasers only** — buyers get the full playlist right on the product page.

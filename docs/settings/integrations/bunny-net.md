@@ -18,6 +18,8 @@ Bunny.net is a **Storage** integration that hosts and delivers your videos throu
 
 - A Bunny.net account.
 
+<div class="ink-timeline">
+
 ## Step 1 — Get your Bunny.net API key
 
 1. Open your Bunny.net dashboard and go to **Account → API key**, or use the direct link: **[https://dash.bunny.net/account/api-key](https://dash.bunny.net/account/api-key)**.
@@ -43,30 +45,6 @@ Ink Player creates and configures your public and private Stream libraries and *
 
 ::: tip
 The account API key is only used to provision your libraries. After connecting, the individual fields are yours to edit; manual changes are kept and won't be overwritten.
-:::
-
-### Settings reference
-
-You normally don't need to edit these — Connect fills them in. They're split across four tabs for manual setup or fine-tuning:
-
-| Field | Tab | Notes |
-| --- | --- | --- |
-| Public Stream Library ID | Stream (Public) | Your public Stream library ID. |
-| Public Stream Library API Key | Stream (Public) | API key for the public library. |
-| Public Stream CDN Hostname | Stream (Public) | e.g. `vz-xxxx.b-cdn.net`. |
-| Private Stream Library ID | Stream (Private) | Your private Stream library ID. |
-| Private Stream Library API Key | Stream (Private) | API key for the private library. |
-| Private Stream CDN Hostname | Stream (Private) | e.g. `vz-xxxx.b-cdn.net`. |
-| Private Stream Token Authentication Key | Stream (Private) | Per-library token key that signs private stream URLs. |
-| Public Storage Zone | Classic Storage | Public storage zone name. |
-| Public Storage CDN Hostname | Classic Storage | e.g. `inkp-public-xxxx.b-cdn.net`. |
-| Private Storage Zone | Classic Storage | Private storage zone name. |
-| Private Storage CDN Hostname | Classic Storage | e.g. `inkp-private-xxxx.b-cdn.net`. |
-| Private Storage Token Authentication Key | Classic Storage | Per-zone token key that signs private storage URLs. |
-| Initial quality | Playback | `auto`, `1080p`, `720p`, `480p`, or `360p`. |
-
-::: info
-Token authentication keys are **per private stream library** and **per private storage zone** — there is no single global token field. Public libraries and zones are served unsigned and need no token key.
 :::
 
 ## Step 3 — Add Bunny.net media
@@ -99,6 +77,32 @@ The selected video is added to your [Media](/media) library and renders as an In
   <img src="/screenshots/settings/integrations/bunny/bunny-net-player.png" alt="A Bunny.net video rendered in the Ink Player block">
   <figcaption>The Bunny.net video playing in the Ink Player</figcaption>
 </figure>
+
+</div>
+
+## Settings reference
+
+You normally don't need to edit these — Connect fills them in. They're split across four tabs for manual setup or fine-tuning:
+
+| Field | Tab | Notes |
+| --- | --- | --- |
+| Public Stream Library ID | Stream (Public) | Your public Stream library ID. |
+| Public Stream Library API Key | Stream (Public) | API key for the public library. |
+| Public Stream CDN Hostname | Stream (Public) | e.g. `vz-xxxx.b-cdn.net`. |
+| Private Stream Library ID | Stream (Private) | Your private Stream library ID. |
+| Private Stream Library API Key | Stream (Private) | API key for the private library. |
+| Private Stream CDN Hostname | Stream (Private) | e.g. `vz-xxxx.b-cdn.net`. |
+| Private Stream Token Authentication Key | Stream (Private) | Per-library token key that signs private stream URLs. |
+| Public Storage Zone | Classic Storage | Public storage zone name. |
+| Public Storage CDN Hostname | Classic Storage | e.g. `inkp-public-xxxx.b-cdn.net`. |
+| Private Storage Zone | Classic Storage | Private storage zone name. |
+| Private Storage CDN Hostname | Classic Storage | e.g. `inkp-private-xxxx.b-cdn.net`. |
+| Private Storage Token Authentication Key | Classic Storage | Per-zone token key that signs private storage URLs. |
+| Initial quality | Playback | `auto`, `1080p`, `720p`, `480p`, or `360p`. |
+
+::: info
+Token authentication keys are **per private stream library** and **per private storage zone** — there is no single global token field. Public libraries and zones are served unsigned and need no token key.
+:::
 
 ## Private content and access control
 

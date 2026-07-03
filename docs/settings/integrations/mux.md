@@ -17,6 +17,8 @@ Mux is a **Storage** integration for hosting and streaming your videos. Connect 
 
 - A [Mux](https://mux.com/) account (you must be signed in for the steps below).
 
+<div class="ink-timeline">
+
 ## Step 1 — Create an organization and environment
 
 1. Sign in to Mux, then open **[https://dashboard.mux.com/organizations/](https://dashboard.mux.com/organizations/)**.
@@ -102,33 +104,6 @@ Only needed if you want **signed (private)** playback. Skip this for public-only
   <figcaption>Paste your token (and optional signing key) on the API Access tab, then save</figcaption>
 </figure>
 
-### Settings reference
-
-| Field | Tab | Required | Notes |
-| --- | --- | --- | --- |
-| Access Token ID | API Access | Yes | From Mux → Settings → Access Tokens. |
-| Access Token Secret | API Access | Yes | Paired with the Access Token ID; shown only once in Mux. |
-| Signing Key ID | API Access | Signed playback only | From Mux → Settings → Signing Keys. |
-| Signing Private Key (Base64) | API Access | Signed playback only | The Base64 secret key from the same signing key. |
-| Video quality | Advanced | No | Encoding tier for new uploads and URL imports: `basic`, `plus`, or `premium`. |
-| Playback policy | Advanced | No | Default for new assets: `public` or `signed`. |
-| Normalize audio | Advanced | No | Even out loudness across your videos. |
-| Auto-generate captions | Advanced | No | Automatically create captions. |
-| Caption language | Advanced | No | Shown when auto-captions are on; defaults to auto-detect. |
-
-## Playback policies
-
-Every Mux asset is played under one of two policies:
-
-- **Public** — anyone with the URL can play the video.
-- **Signed** — Ink Player generates an expiring, unforgeable **RS256 JWT-signed** URL.
-
-::: warning
-**Signed playback protects the stream URL** — the link is unforgeable and expires — but it does **not by itself** stop a logged-in viewer from sharing a link while it is still valid.
-
-A **public** Mux video placed on a gated page is gated **at the page**, but its URL remains reachable to anyone who has it. Choose **signed** when you need the stream URL itself to be protected.
-:::
-
 ## Step 5 — Add Mux media
 
 1. Add an **Ink Player** block (or open **Add video** in your [Media](/media) library).
@@ -163,6 +138,35 @@ The selected asset is added to your [Media](/media) library and renders as an In
   <img src="/screenshots/settings/integrations/mux/mux-player.png" alt="A Mux video rendered in the Ink Player block">
   <figcaption>The Mux video playing in the Ink Player</figcaption>
 </figure>
+
+</div>
+
+## Playback policies
+
+Every Mux asset is played under one of two policies:
+
+- **Public** — anyone with the URL can play the video.
+- **Signed** — Ink Player generates an expiring, unforgeable **RS256 JWT-signed** URL.
+
+::: warning
+**Signed playback protects the stream URL** — the link is unforgeable and expires — but it does **not by itself** stop a logged-in viewer from sharing a link while it is still valid.
+
+A **public** Mux video placed on a gated page is gated **at the page**, but its URL remains reachable to anyone who has it. Choose **signed** when you need the stream URL itself to be protected.
+:::
+
+## Settings reference
+
+| Field | Tab | Required | Notes |
+| --- | --- | --- | --- |
+| Access Token ID | API Access | Yes | From Mux → Settings → Access Tokens. |
+| Access Token Secret | API Access | Yes | Paired with the Access Token ID; shown only once in Mux. |
+| Signing Key ID | API Access | Signed playback only | From Mux → Settings → Signing Keys. |
+| Signing Private Key (Base64) | API Access | Signed playback only | The Base64 secret key from the same signing key. |
+| Video quality | Advanced | No | Encoding tier for new uploads and URL imports: `basic`, `plus`, or `premium`. |
+| Playback policy | Advanced | No | Default for new assets: `public` or `signed`. |
+| Normalize audio | Advanced | No | Even out loudness across your videos. |
+| Auto-generate captions | Advanced | No | Automatically create captions. |
+| Caption language | Advanced | No | Shown when auto-captions are on; defaults to auto-detect. |
 
 ::: info
 For how playback policies fit into protecting your content, see [Access control](/guide/access-control).
