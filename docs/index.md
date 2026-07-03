@@ -1,5 +1,6 @@
 ---
 layout: home
+description: Ink Player is a WordPress plugin for branded video & audio players — a reusable media library with playlists, access control, overlays, ads, analytics, lead capture, and integrations for Bunny.net, Mux, YouTube, Vimeo, and more.
 
 hero:
   name: Ink Player

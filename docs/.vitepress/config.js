@@ -1,4 +1,7 @@
 import { defineConfig } from 'vitepress'
+import llmstxt from 'vitepress-plugin-llms'
+
+const SITE = 'https://docs.inkplayer.com'
 
 export default defineConfig({
   lang: 'en-US',
@@ -6,17 +9,86 @@ export default defineConfig({
   description: 'Complete documentation for Ink Player — the video & audio player plugin for WordPress.',
   cleanUrls: true,
   lastUpdated: true,
+  sitemap: { hostname: SITE },
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
     ['meta', { name: 'theme-color', content: '#29E3B2' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'Ink Player Docs' }],
-    ['meta', { property: 'og:title', content: 'Ink Player Documentation' }],
-    ['meta', { property: 'og:description', content: 'Learn how to use Ink Player for WordPress media libraries, video and audio players, playlists, overlays, ads, analytics, lead capture, and integrations.' }],
+    ['meta', { property: 'og:image', content: `${SITE}/og-image.png` }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:title', content: 'Ink Player Documentation' }],
-    ['meta', { name: 'twitter:description', content: 'Guides for building branded WordPress video and audio experiences with Ink Player.' }],
+    ['meta', { name: 'twitter:image', content: `${SITE}/og-image.png` }],
   ],
+  vite: {
+    plugins: [llmstxt()],
+  },
+  // Per-page SEO: unique canonical + Open Graph/Twitter titles & descriptions,
+  // plus JSON-LD (TechArticle + breadcrumbs; SoftwareApplication on the home page).
+  transformPageData(pageData) {
+    const clean = pageData.relativePath.replace(/\.md$/, '').replace(/(^|\/)index$/, '$1')
+    const url = clean === '' ? `${SITE}/` : `${SITE}/${clean}`
+    const title = pageData.frontmatter.title || pageData.title || 'Ink Player Documentation'
+    const fullTitle = clean === '' ? 'Ink Player Documentation' : `${title} | Ink Player Docs`
+    const description = pageData.frontmatter.description
+      || pageData.description
+      || 'Documentation for Ink Player — the video & audio player plugin for WordPress.'
+
+    const head = (pageData.frontmatter.head ??= [])
+    head.push(
+      ['link', { rel: 'canonical', href: url }],
+      ['meta', { property: 'og:url', content: url }],
+      ['meta', { property: 'og:title', content: fullTitle }],
+      ['meta', { property: 'og:description', content: description }],
+      ['meta', { name: 'twitter:title', content: fullTitle }],
+      ['meta', { name: 'twitter:description', content: description }],
+    )
+
+    const article = {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: title,
+      description,
+      url,
+      image: `${SITE}/og-image.png`,
+      inLanguage: 'en-US',
+      author: { '@type': 'Organization', name: 'Ink Player', url: 'https://inkplayer.com' },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Ink Player',
+        logo: { '@type': 'ImageObject', url: `${SITE}/logo-light.svg` },
+      },
+    }
+    if (pageData.lastUpdated) article.dateModified = new Date(pageData.lastUpdated).toISOString()
+    head.push(['script', { type: 'application/ld+json' }, JSON.stringify(article)])
+
+    if (clean === '') {
+      head.push(['script', { type: 'application/ld+json' }, JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        name: 'Ink Player',
+        applicationCategory: 'MultimediaApplication',
+        operatingSystem: 'WordPress',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+        description,
+        url: 'https://inkplayer.com',
+      })])
+    } else {
+      const parts = clean.split('/')
+      head.push(['script', { type: 'application/ld+json' }, JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Docs', item: `${SITE}/` },
+          ...parts.map((seg, i) => ({
+            '@type': 'ListItem',
+            position: i + 2,
+            name: seg.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()),
+            item: `${SITE}/${parts.slice(0, i + 1).join('/')}`,
+          })),
+        ],
+      })])
+    }
+  },
   themeConfig: {
     logo: { light: '/logo-light.svg', dark: '/logo-dark.svg' },
     siteTitle: 'Ink Player',
