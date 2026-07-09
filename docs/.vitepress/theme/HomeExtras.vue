@@ -73,6 +73,7 @@ const logos = [
     {src: '/logos/elementor.gif', alt: 'Elementor', link: '/settings/integrations/elementor'},
     {src: '/logos/beaver.png', alt: 'Beaver Builder', link: '/settings/integrations/beaver-builder'},
     {src: '/logos/google_analytics.svg', alt: 'Google Analytics', link: '/settings/integrations/google-analytics'},
+    {src: '/logos/automatorwp.svg', alt: 'AutomatorWP', link: '/settings/integrations/automatorwp'},
 ]
 
 const columns = [
