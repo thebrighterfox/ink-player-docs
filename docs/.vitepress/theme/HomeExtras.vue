@@ -7,8 +7,9 @@
                 <a class="ink-strip__all" href="/settings/integrations">All integrations →</a>
             </div>
             <div class="ink-strip__logos">
-                <a v-for="l in logos" :key="l.src" :href="l.link" class="ink-logo" :title="l.alt">
+                <a v-for="l in logos" :key="l.src" :href="l.link" class="ink-logo" :aria-label="l.alt">
                     <img :src="l.src" :alt="l.alt"/>
+                    <span class="ink-logo__tip">{{ l.alt }}</span>
                 </a>
             </div>
         </section>
@@ -157,6 +158,7 @@ const workflow = [
     gap: 12px;
 }
 .ink-logo {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -169,6 +171,25 @@ const workflow = [
 }
 .ink-logo:hover { transform: translateY(-2px); border-color: var(--vp-c-brand-1); }
 .ink-logo img { width: 26px; height: 26px; object-fit: contain; }
+.ink-logo__tip {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    padding: 4px 9px;
+    border-radius: 6px;
+    background: var(--vp-c-text-1);
+    color: var(--vp-c-bg);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.3;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .15s ease, transform .15s ease;
+    z-index: 10;
+}
+.ink-logo:hover .ink-logo__tip { opacity: 1; transform: translateX(-50%) translateY(0); }
 
 /* Workflow */
 .ink-workflow {
