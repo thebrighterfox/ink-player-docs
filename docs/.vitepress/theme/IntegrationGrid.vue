@@ -25,6 +25,7 @@ const integrations = [
     {name: 'Elementor', cat: 'Builder', logo: '/logos/elementor.gif', link: '/settings/integrations/elementor'},
     {name: 'Beaver Builder', cat: 'Builder', logo: '/logos/beaver.png', link: '/settings/integrations/beaver-builder'},
     {name: 'Google Analytics', cat: 'Analytics', logo: '/logos/google_analytics.svg', link: '/settings/integrations/google-analytics'},
+    {name: 'AutomatorWP', cat: 'Automation', logo: '/logos/automatorwp.svg', link: '/settings/integrations/automatorwp'},
 ]
 </script>
 

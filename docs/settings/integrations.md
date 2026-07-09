@@ -1,5 +1,5 @@
 ---
-description: Connect Ink Player to Bunny.net, Mux, YouTube, Vimeo, Mailchimp, MailerLite, ActiveCampaign, FluentCRM, WooCommerce, Elementor, Beaver Builder, and Google Analytics.
+description: Connect Ink Player to Bunny.net, Mux, YouTube, Vimeo, Mailchimp, MailerLite, ActiveCampaign, FluentCRM, WooCommerce, Elementor, Beaver Builder, Google Analytics, and AutomatorWP.
 ---
 
 # Integrations
@@ -29,6 +29,7 @@ Cards are organized into categories so related tools are grouped together:
 - **E-commerce** — online store platforms.
 - **Builder** — page builders Ink Player plugs into.
 - **Analytics** — playback and engagement reporting.
+- **Automation** — no-code automation platforms Ink Player can trigger.
 
 ## Enabling and managing an integration
 

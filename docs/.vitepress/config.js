@@ -320,6 +320,7 @@ export default defineConfig({
             { text: 'Elementor', link: '/settings/integrations/elementor' },
             { text: 'Beaver Builder', link: '/settings/integrations/beaver-builder' },
             { text: 'Google Analytics', link: '/settings/integrations/google-analytics' },
+            { text: 'AutomatorWP', link: '/settings/integrations/automatorwp' },
           ],
         },
       ],
