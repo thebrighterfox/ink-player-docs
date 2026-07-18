@@ -302,6 +302,7 @@ export default defineConfig({
             { text: 'Ads', link: '/settings/ads' },
             { text: 'Advanced', link: '/settings/advanced' },
             { text: 'Webhooks', link: '/settings/webhooks' },
+            { text: 'Migration', link: '/settings/migration' },
           ],
         },
         {

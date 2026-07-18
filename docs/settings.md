@@ -20,6 +20,7 @@ The Settings area lives under the **Ink Player** admin menu → **Settings**. A 
 - **[Ads](/settings/ads)** — Run linear video ads, and enable or disable every ad site-wide.
 - **[Advanced](/settings/advanced)** — Inject custom CSS/JS and decide what happens to your data on uninstall.
 - **[Webhooks](/settings/webhooks)** — Send Ink Player payloads (such as captured leads) to any URL you choose.
+- **[Migration](/settings/migration)** — Import your library from Presto Player or FluentPlayer. Appears only when a source plugin is active.
 - **[Integrations](/settings/integrations)** — Connect external services and media sources.
 
 ::: tip
