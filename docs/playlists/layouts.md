@@ -11,6 +11,13 @@ A playlist layout controls how the player and the item list appear together. In 
   <figcaption>Layout panel — List, Grid, and Slider</figcaption>
 </figure>
 
+The settings drawer has two tabs — **General** (position and display options) and **[Style](#style)** (colors).
+
+<figure>
+  <img src="/screenshots/playlists/edit-layout.png" alt="Playlist layout settings drawer — the General tab with position and display options">
+  <figcaption>Layout settings drawer — the General tab</figcaption>
+</figure>
+
 Video playlists offer three layouts — **List**, **Grid**, and **Slider**. Audio playlists always use the **List** layout (audio plays in a bar, so the list only stacks above or below it).
 
 <figure>
@@ -75,6 +82,27 @@ Audio playlists always use the **List** layout, stacked above or below the audio
 | **Show duration** | Shows each track's length. |
 
 Keep audio titles short enough for mobile screens. If titles are long, use clear episode numbers or module prefixes so listeners can scan the list quickly.
+
+## Style
+
+Each layout's settings drawer has two tabs: **General** (the options above) and **Style**. Style colors apply to the **whole playlist** — set them once and they carry across layouts. Every field is **empty by default**, which keeps the built-in dark look; set a value to override it.
+
+The Style tab shows only the fields that make sense for the current layout:
+
+| Field | What it themes | Layouts |
+| --- | --- | --- |
+| **Panel Bg** | Background of the list panel (List) or the rail/strip (Grid, Slider — Thumbnails). | List, Grid, Slider (Thumbnails) |
+| **Header Bg** | Background of the list's header bar. | List only |
+| **Text** | Item title text. | List, Grid, Slider (Thumbnails) |
+| **Secondary Text** | Item index and duration. | List, Grid, Slider (Thumbnails) |
+| **Active / Hover Bg** | Highlight behind the active and hovered item. | List, Grid, Slider (Thumbnails) |
+| **Item radius** | Corner rounding of item rows/cards, `0–40px`. | List, Grid, Slider (Thumbnails) |
+| **Spacing** | Gap between list rows, `0–24px`. | List only |
+| **Background** | The bar behind the player. | Slider — Basic carousel |
+
+The **Basic carousel** has no list or cards, so its Style tab shows only **Background**.
+
+Colors accept any CSS color, including semi-transparent `rgba()` values — useful for tinting the panel over the page without fully hiding it.
 
 ## Layout checklist
 

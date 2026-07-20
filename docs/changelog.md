@@ -12,6 +12,8 @@ Features added since the initial release.
 
 **Highlights:**
 
+- **Player appearance** — theme the player beyond corner radius: **control bar** color, **control icon** color, **icon hover background**, and **play-button background**. Set them per media in the Appearance panel or on a preset to theme every player at once. See [Video inspector](/media/video-inspector#appearance).
+- **Playlist theming** — a new **Style** tab in the layout editor themes playlist colors (panel & header background, text, secondary text, active/hover highlight, item radius, and row spacing), applied across the List, Grid, and Slider layouts. See [Playlist layouts](/playlists/layouts#style).
 - **Draft / Published status** — media and playlists now have a publish state. Set it with the segmented **Draft / Published** control in the blocks, or with **Save as draft** / **Publish** in the dashboard. Drafts are hidden from visitors; managers still see them with an admin-only amber **Draft** badge on the player.
 - **Global ads** — play pre-roll, mid-roll, and post-roll ad breaks, controlled by a master kill-switch. Ads can be served from a custom video file or a VAST tag, with ad support for YouTube and Vimeo embeds. VPAID is disabled — only modern VAST, OMID, and SIMID are used.
 - **Video overlay type** — add a video overlay, with two-source media selection so you can pick separate sources for the overlay and the player.

@@ -41,13 +41,19 @@ Use this panel first when a video needs a better title, poster, or mobile playba
 
 ## Appearance
 
-Use **Appearance** for the outer shape of the player.
+Use **Appearance** for the player's shape and colors.
 
 | Option | What it does |
 | --- | --- |
 | **Corner Radius** | Rounds the player corners from `0px` to `40px`. |
+| **Control Bar** | Solid color for the control bar. Empty keeps the default gradient scrim. |
+| **Icon** | Color of the control icons (play, seek, volume, settings, fullscreen…) and the center play glyph. |
+| **Icon Hover Background** | Background chip shown behind a control icon on hover. |
+| **Play Button Background** | Background behind the large center play button. |
 
-This affects the visible player container. It is useful when the player sits inside a design with rounded images, cards, or product sections.
+Every color is **empty by default**, which keeps the player's built-in look. Set a color to override it. Colors set here apply to this media; the same controls also live on a [preset](/settings/presets), so you can theme every player at once and override individual media as needed.
+
+Corner Radius affects the visible player container — useful when the player sits inside a design with rounded images, cards, or product sections.
 
 ## Overlays
 
