@@ -26,23 +26,70 @@ Cloudflare Stream is a **paid add-on**. The free Cloudflare plan includes **no**
 
 ## Step 1 — Create a Stream API token
 
-1. In the Cloudflare dashboard, open **My Profile → API Tokens**, or use the direct link: **[https://dash.cloudflare.com/profile/api-tokens](https://dash.cloudflare.com/profile/api-tokens)**.
-2. Click **Create Token → Create Custom Token**.
-3. Under **Permissions**, choose **Account** · **Stream** · **Edit**.
-4. Under **Account Resources**, choose **Include → All accounts** (or your specific account).
-5. Leave **Client IP Filtering** and **TTL** blank, click **Continue to summary**, then **Create Token**.
-6. Copy the token now — Cloudflare shows it **only once**.
+1. In the Cloudflare dashboard, open **My Profile → API Tokens**, or use the direct link: **[https://dash.cloudflare.com/profile/api-tokens](https://dash.cloudflare.com/profile/api-tokens)**, then click **Create Token**.
+
+<figure>
+  <img src="/screenshots/settings/integrations/cloudflare-stream/api-tokens.png" alt="The Cloudflare User API Tokens page with the Create Token button">
+  <figcaption>Open My Profile → API Tokens and click Create Token</figcaption>
+</figure>
+
+2. Under **Custom token**, click **Get started**.
+
+<figure>
+  <img src="/screenshots/settings/integrations/cloudflare-stream/create-custom-token.png" alt="The Create API Token page with the Create Custom Token Get started button">
+  <figcaption>Choose Create Custom Token → Get started</figcaption>
+</figure>
+
+3. Name the token, set **Permissions** to **Account** · **Stream** · **Edit**, and set **Account Resources** to **Include → All accounts** (or your specific account). Leave IP filtering and TTL blank, then click **Continue to summary**.
+
+<figure>
+  <img src="/screenshots/settings/integrations/cloudflare-stream/token-permissions.png" alt="The custom token form with Account · Stream · Edit permission selected">
+  <figcaption>Set the permission to Account · Stream · Edit</figcaption>
+</figure>
+
+4. Review the summary (**All accounts – Stream:Edit**) and click **Create Token**.
+
+<figure>
+  <img src="/screenshots/settings/integrations/cloudflare-stream/token-summary.png" alt="The token summary showing All accounts - Stream:Edit and the Create Token button">
+  <figcaption>Confirm the summary and click Create Token</figcaption>
+</figure>
+
+5. Copy the token now — Cloudflare shows it **only once**.
+
+<figure>
+  <img src="/screenshots/settings/integrations/cloudflare-stream/token-value.png" alt="The created token screen with the token value and a copy button">
+  <figcaption>Copy the token — it's shown only once</figcaption>
+</figure>
 
 ## Step 2 — Find your Account ID
 
 Your Account ID is the 32-character value in any dashboard URL — `dash.cloudflare.com/`**`<account-id>`** — or in the **right sidebar of the Stream page**, labelled *Account ID*. It is not the Zone ID, the token's ID, or your email.
 
+<figure>
+  <img src="/screenshots/settings/integrations/cloudflare-stream/stream-search.png" alt="The Cloudflare quick search jumping to Stream → Videos">
+  <figcaption>Open Stream from the Cloudflare dashboard (search or the sidebar)</figcaption>
+</figure>
+
+<figure>
+  <img src="/screenshots/settings/integrations/cloudflare-stream/account-id.png" alt="The Stream Overview page with the Account ID in the right sidebar">
+  <figcaption>Your Account ID is on the Stream Overview page, under Account details</figcaption>
+</figure>
+
 ## Step 3 — Connect Cloudflare Stream in Ink Player
 
-1. Go to **Settings → [Integrations](/settings/integrations)** and enable **Cloudflare Stream** (under the **Storage** category).
-2. Click **Manage** to open its settings.
-3. Paste your **Account ID** and **API Token**.
-4. Click **Send test** to verify the credentials, then **Save changes**.
+1. Go to **Settings → [Integrations](/settings/integrations)** and enable **Cloudflare Stream** (under the **Storage** category), then click **Manage**.
+
+<figure>
+  <img src="/screenshots/settings/integrations/cloudflare-stream/enable-integration.png" alt="The Ink Player Integrations grid with Cloudflare Stream and its Manage button">
+  <figcaption>Enable Cloudflare Stream under Storage, then click Manage</figcaption>
+</figure>
+
+2. Paste your **Account ID** and **API Token**, click **Send test** to verify, then **Save changes**.
+
+<figure>
+  <img src="/screenshots/settings/integrations/cloudflare-stream/connect.png" alt="The Cloudflare Stream settings form in Ink Player with Account ID and API Token fields and Send test">
+  <figcaption>Paste your Account ID and API Token, Send test, then Save changes</figcaption>
+</figure>
 
 On save, Ink Player provisions a **signing key** for you in the background, so signed (private) playback works immediately — there is nothing else to configure. (Hover the **ⓘ** next to the API Token field for the subscription note.)
 
@@ -56,6 +103,16 @@ If you change the Account ID later, Ink Player re-provisions the signing key aut
 2. Under **Choose a source**, click **Cloudflare Stream**.
 3. In the media picker, use the **Public / Signed** toggle to choose how the video you insert is delivered, then search or browse your videos, **Upload** a new file, and select a video and click **Select video**.
 
+<figure>
+  <img src="/screenshots/settings/integrations/cloudflare-stream/add-media-source.png" alt="The Ink Player block placeholder with Cloudflare Stream as a source option">
+  <figcaption>Choose Cloudflare Stream as the source</figcaption>
+</figure>
+
+<figure>
+  <img src="/screenshots/settings/integrations/cloudflare-stream/media-picker.png" alt="The Cloudflare Stream media picker with the Public/Signed toggle and a video grid">
+  <figcaption>The Stream media picker: pick Public/Signed, browse or upload, and select a video</figcaption>
+</figure>
+
 ### Import from a URL
 
 Cloudflare can ingest a video straight from a public link. In the picker, click the **link** icon to reveal the import bar, paste a **public, direct video URL**, and click **Import**. Cloudflare processes the video and it appears in your library once it is ready.
@@ -63,6 +120,11 @@ Cloudflare can ingest a video straight from a public link. In the picker, click 
 ## Step 5 — The player renders
 
 The selected video is added to your [Media](/media) library and renders as an Ink Player — ready to place in a post, page, or builder, with all the usual player settings, presets, and overlays. Signed videos are re-signed with a fresh, short-lived token on every render.
+
+<figure>
+  <img src="/screenshots/settings/integrations/cloudflare-stream/stream-player.png" alt="A Cloudflare Stream video playing in the Ink Player block editor">
+  <figcaption>The Cloudflare Stream video playing in the Ink Player</figcaption>
+</figure>
 
 </div>
 
