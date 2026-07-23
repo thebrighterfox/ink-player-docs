@@ -1,5 +1,5 @@
 ---
-description: Connect Ink Player to Bunny.net, Mux, YouTube, Vimeo, Mailchimp, MailerLite, ActiveCampaign, FluentCRM, WooCommerce, Elementor, Beaver Builder, Google Analytics, and AutomatorWP.
+description: Connect Ink Player to Bunny.net, Mux, Cloudflare Stream, Cloudflare R2, YouTube, Vimeo, Mailchimp, MailerLite, ActiveCampaign, FluentCRM, WooCommerce, Elementor, Beaver Builder, Google Analytics, and AutomatorWP.
 ---
 
 # Integrations

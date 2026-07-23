@@ -311,6 +311,8 @@ export default defineConfig({
             { text: 'Overview', link: '/settings/integrations' },
             { text: 'Bunny.net', link: '/settings/integrations/bunny-net' },
             { text: 'Mux', link: '/settings/integrations/mux' },
+            { text: 'Cloudflare Stream', link: '/settings/integrations/cloudflare-stream' },
+            { text: 'Cloudflare R2', link: '/settings/integrations/cloudflare-r2' },
             { text: 'YouTube', link: '/settings/integrations/youtube' },
             { text: 'Vimeo', link: '/settings/integrations/vimeo' },
             { text: 'Mailchimp', link: '/settings/integrations/mailchimp' },

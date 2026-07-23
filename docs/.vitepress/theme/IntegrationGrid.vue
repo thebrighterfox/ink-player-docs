@@ -15,6 +15,8 @@
 const integrations = [
     {name: 'Bunny.net', cat: 'Storage', logo: '/logos/bunnynet.svg', link: '/settings/integrations/bunny-net'},
     {name: 'Mux', cat: 'Storage', logo: '/logos/mux.png', link: '/settings/integrations/mux'},
+    {name: 'Cloudflare Stream', cat: 'Storage', logo: '/logos/cloudflare-stream.svg', link: '/settings/integrations/cloudflare-stream'},
+    {name: 'Cloudflare R2', cat: 'Storage', logo: '/logos/cloudflare-r2.svg', link: '/settings/integrations/cloudflare-r2'},
     {name: 'YouTube', cat: 'Video', logo: '/logos/youtube.svg', link: '/settings/integrations/youtube'},
     {name: 'Vimeo', cat: 'Video', logo: '/logos/vimeo.svg', link: '/settings/integrations/vimeo'},
     {name: 'Mailchimp', cat: 'Email', logo: '/logos/mailchimp.png', link: '/settings/integrations/mailchimp'},

@@ -12,6 +12,7 @@ Features added since the initial release.
 
 **Highlights:**
 
+- **Cloudflare providers** — two new **Storage** integrations. **[Cloudflare Stream](/settings/integrations/cloudflare-stream)** streams adaptive HLS with public or signed playback, and provisions the signing key for you on save. **[Cloudflare R2](/settings/integrations/cloudflare-r2)** serves video files from an S3-compatible bucket, public or with short-lived signed URLs. Both work in the dashboard and the blocks. See [Providers](/guide/providers).
 - **Player appearance** — theme the player beyond corner radius: **control bar** color, **control icon** color, **icon hover background**, and **play-button background**. Set them per media in the Appearance panel or on a preset to theme every player at once. See [Video inspector](/media/video-inspector#appearance).
 - **Playlist theming** — a new **Style** tab in the layout editor themes playlist colors (panel & header background, text, secondary text, active/hover highlight, item radius, and row spacing), applied across the List, Grid, and Slider layouts. See [Playlist layouts](/playlists/layouts#style).
 - **Draft / Published status** — media and playlists now have a publish state. Set it with the segmented **Draft / Published** control in the blocks, or with **Save as draft** / **Publish** in the dashboard. Drafts are hidden from visitors; managers still see them with an admin-only amber **Draft** badge on the player.

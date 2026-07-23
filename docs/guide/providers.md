@@ -22,6 +22,8 @@ Ink Player uses **one consistent player for every source**. Whether your media i
 | **Bunny.net Stream** | Streaming | Video hosted on Bunny.net Stream | Choose the **Bunny.net** source |
 | **Bunny Storage** | Storage | A file on Bunny.net's classic storage | Choose the **Bunny Storage** source |
 | **Mux** | Streaming | Video hosted on Mux | Choose the **Mux** source |
+| **Cloudflare Stream** | Streaming | Video hosted on Cloudflare Stream (adaptive HLS) | Choose the **Cloudflare Stream** source |
+| **Cloudflare R2** | Storage | A file in a Cloudflare R2 bucket | Choose the **Cloudflare R2** source |
 
 ## Three ways to add media
 
@@ -41,11 +43,11 @@ Pasting is usually the quickest path. For platform links, just paste the page UR
 - **Adaptive streaming:** HLS (`.m3u8`) and DASH (`.mpd`)
 - **Audio:** MP3 and other common audio formats
 - **Platforms:** YouTube, Vimeo
-- **Streaming/storage services:** Bunny.net Stream, Bunny Storage, and Mux
+- **Streaming/storage services:** Bunny.net Stream, Bunny Storage, Mux, Cloudflare Stream, and Cloudflare R2
 
 ## Provider integrations
 
-Some sources are configured under [Settings → Integrations](/settings/integrations), where you connect services such as Bunny.net and Mux.
+Some sources are configured under [Settings → Integrations](/settings/integrations), where you connect services such as Bunny.net, Mux, [Cloudflare Stream](/settings/integrations/cloudflare-stream), and [Cloudflare R2](/settings/integrations/cloudflare-r2).
 
 ## Multi-language sources
 
@@ -55,4 +57,4 @@ For best results, keep every language version aligned to the same edit and durat
 
 ## Access and providers
 
-Not every source can be truly access-protected. Bunny.net, Mux, and protected (private) uploads support enforced [access control](/guide/access-control) and signed playback, while public WordPress media URLs and platform embeds (YouTube/Vimeo) cannot be. See [Access control](/guide/access-control) for the full picture.
+Not every source can be truly access-protected. Bunny.net, Mux, Cloudflare Stream, Cloudflare R2, and protected (private) uploads support enforced [access control](/guide/access-control) and signed playback, while public WordPress media URLs and platform embeds (YouTube/Vimeo) cannot be. See [Access control](/guide/access-control) for the full picture.

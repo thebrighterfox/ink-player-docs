@@ -25,7 +25,7 @@ features:
     linkText: Read the guide
   - icon: 🎬
     title: Every Source, One Player
-    details: Self-hosted, direct MP4/HLS/DASH, YouTube, Vimeo, Bunny.net Stream & Storage, and Mux.
+    details: Self-hosted, direct MP4/HLS/DASH, YouTube, Vimeo, Bunny.net Stream & Storage, Mux, and Cloudflare Stream & R2.
     link: /guide/providers
     linkText: Browse sources
   - icon: 🌐

@@ -6,11 +6,22 @@
                 <h2>Plays everything, connects to everything</h2>
                 <a class="ink-strip__all" href="/settings/integrations">All integrations →</a>
             </div>
-            <div class="ink-strip__logos">
-                <a v-for="l in logos" :key="l.src" :href="l.link" class="ink-logo" :aria-label="l.alt">
-                    <img :src="l.src" :alt="l.alt"/>
-                    <span class="ink-logo__tip">{{ l.alt }}</span>
-                </a>
+            <div class="ink-strip__marquee">
+                <div class="ink-strip__track">
+                    <a
+                        v-for="(l, idx) in marqueeLogos"
+                        :key="idx"
+                        :href="l.link"
+                        class="ink-logo"
+                        :class="{ 'is-dup': l.dup }"
+                        :aria-label="l.dup ? null : l.alt"
+                        :aria-hidden="l.dup ? 'true' : null"
+                        :tabindex="l.dup ? -1 : null"
+                    >
+                        <img :src="l.src" :alt="l.dup ? '' : l.alt"/>
+                        <span class="ink-logo__tip">{{ l.alt }}</span>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -66,6 +77,8 @@ const logos = [
     {src: '/logos/vimeo.svg', alt: 'Vimeo', link: '/settings/integrations/vimeo'},
     {src: '/logos/bunnynet.svg', alt: 'Bunny.net', link: '/settings/integrations/bunny-net'},
     {src: '/logos/mux.png', alt: 'Mux', link: '/settings/integrations/mux'},
+    {src: '/logos/cloudflare-stream.svg', alt: 'Cloudflare Stream', link: '/settings/integrations/cloudflare-stream'},
+    {src: '/logos/cloudflare-r2.svg', alt: 'Cloudflare R2', link: '/settings/integrations/cloudflare-r2'},
     {src: '/logos/mailchimp.png', alt: 'Mailchimp', link: '/settings/integrations/mailchimp'},
     {src: '/logos/mailerlite.webp', alt: 'MailerLite', link: '/settings/integrations/mailerlite'},
     {src: '/logos/activecampaign.png', alt: 'ActiveCampaign', link: '/settings/integrations/activecampaign'},
@@ -75,6 +88,12 @@ const logos = [
     {src: '/logos/beaver.png', alt: 'Beaver Builder', link: '/settings/integrations/beaver-builder'},
     {src: '/logos/google_analytics.svg', alt: 'Google Analytics', link: '/settings/integrations/google-analytics'},
     {src: '/logos/automatorwp.svg', alt: 'AutomatorWP', link: '/settings/integrations/automatorwp'},
+]
+
+// Duplicated once so the marquee track loops seamlessly at translateX(-50%).
+const marqueeLogos = [
+    ...logos.map((l) => ({...l, dup: false})),
+    ...logos.map((l) => ({...l, dup: true})),
 ]
 
 const columns = [
@@ -152,17 +171,45 @@ const workflow = [
     font-weight: 600;
     color: var(--vp-c-brand-1);
 }
-.ink-strip__logos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-    gap: 12px;
+.ink-strip__marquee {
+    position: relative;
+    /* clip only horizontally so the hover name label (above each tile) isn't cut off */
+    overflow-x: clip;
+    overflow-y: visible;
+}
+/* edge fade via overlay gradients — a mask-image would also clip the hover label */
+.ink-strip__marquee::before,
+.ink-strip__marquee::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 44px;
+    z-index: 2;
+    pointer-events: none;
+}
+.ink-strip__marquee::before { left: 0; background: linear-gradient(90deg, var(--vp-c-bg-soft), transparent); }
+.ink-strip__marquee::after { right: 0; background: linear-gradient(-90deg, var(--vp-c-bg-soft), transparent); }
+.ink-strip__track {
+    display: flex;
+    width: max-content;
+    animation: ink-marquee 40s linear infinite;
+}
+.ink-strip__marquee:hover .ink-strip__track,
+.ink-strip__track:focus-within { animation-play-state: paused; }
+@keyframes ink-marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
 }
 .ink-logo {
     position: relative;
+    flex: none;
+    width: 56px;
+    height: 56px;
+    margin-right: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    aspect-ratio: 1;
     border-radius: 8px;
     background: var(--vp-c-bg);
     border: 1px solid var(--vp-c-border);
@@ -190,6 +237,12 @@ const workflow = [
     z-index: 10;
 }
 .ink-logo:hover .ink-logo__tip { opacity: 1; transform: translateX(-50%) translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+    .ink-strip__marquee::before, .ink-strip__marquee::after { display: none; }
+    .ink-strip__track { animation: none; flex-wrap: wrap; gap: 12px; }
+    .ink-logo { margin-right: 0; }
+    .ink-logo.is-dup { display: none; }
+}
 
 /* Workflow */
 .ink-workflow {
