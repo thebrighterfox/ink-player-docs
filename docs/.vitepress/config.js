@@ -12,7 +12,7 @@ export default defineConfig({
   sitemap: { hostname: SITE },
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
-    ['meta', { name: 'theme-color', content: '#29E3B2' }],
+    ['meta', { name: 'theme-color', content: '#283618' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'Ink Player Docs' }],
     ['meta', { property: 'og:image', content: `${SITE}/og-image.png` }],
