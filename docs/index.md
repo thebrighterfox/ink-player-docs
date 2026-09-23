@@ -1,6 +1,6 @@
 ---
 layout: home
-title: "Ink Player - Video & Audio Player Plugin for WordPress"
+title: "Ink Player Docs - Video & Audio Player for WordPress"
 titleTemplate: false
 description: "Documentation for Ink Player, the WordPress video and audio player: playlists, YouTube and Vimeo import, overlays, access control, analytics and blocks."
 

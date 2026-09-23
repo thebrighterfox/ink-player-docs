@@ -14,7 +14,7 @@ export default defineConfig({
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
     ['meta', { name: 'theme-color', content: '#283618' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:site_name', content: 'Ink Player' }],
+    ['meta', { property: 'og:site_name', content: 'Ink Player Docs' }],
     ['meta', { property: 'og:image', content: `${SITE}/og-image.png` }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:image', content: `${SITE}/og-image.png` }],
@@ -65,8 +65,8 @@ export default defineConfig({
       head.push(['script', { type: 'application/ld+json' }, JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'WebSite',
-        name: 'Ink Player',
-        alternateName: 'Ink Player Docs',
+        name: 'Ink Player Docs',
+        alternateName: 'Ink Player',
         url: `${SITE}/`,
         publisher: { '@type': 'Organization', name: 'Ink Player', url: 'https://inkplayer.com' },
       })])
