@@ -1,40 +1,30 @@
 ---
-description: Track notable Ink Player releases and documentation changes.
+description: Every Ink Player release and what changed in it.
 ---
 
 # Changelog
 
-All notable changes to Ink Player are documented here.
+## 1.0.1
 
-## Unreleased
-
-Features added since the initial release.
-
-**Highlights:**
-
-- **Cloudflare providers** — two new **Storage** integrations. **[Cloudflare Stream](/settings/integrations/cloudflare-stream)** streams adaptive HLS with public or signed playback, and provisions the signing key for you on save. **[Cloudflare R2](/settings/integrations/cloudflare-r2)** serves video files from an S3-compatible bucket, public or with short-lived signed URLs. Both work in the dashboard and the blocks. See [Providers](/guide/providers).
-- **Player appearance** — theme the player beyond corner radius: **control bar** color, **control icon** color, **icon hover background**, and **play-button background**. Set them per media in the Appearance panel or on a preset to theme every player at once. See [Video inspector](/media/video-inspector#appearance).
-- **Playlist theming** — a new **Style** tab in the layout editor themes playlist colors (panel & header background, text, secondary text, active/hover highlight, item radius, and row spacing), applied across the List, Grid, and Slider layouts. See [Playlist layouts](/playlists/layouts#style).
-- **Draft / Published status** — media and playlists now have a publish state. Set it with the segmented **Draft / Published** control in the blocks, or with **Save as draft** / **Publish** in the dashboard. Drafts are hidden from visitors; managers still see them with an admin-only amber **Draft** badge on the player.
-- **Global ads** — play pre-roll, mid-roll, and post-roll ad breaks, controlled by a master kill-switch. Ads can be served from a custom video file or a VAST tag, with ad support for YouTube and Vimeo embeds. VPAID is disabled — only modern VAST, OMID, and SIMID are used.
-- **Video overlay type** — add a video overlay, with two-source media selection so you can pick separate sources for the overlay and the player.
-- **Alternate audio languages** — the multi-language switcher now supports alternate spoken-language sources, including alternate **audio** sources, and preserves the current playback position when switching. See [Multi-language video](/media/multi-language).
+- Fixed: an empty control bar still painted a band over the video.
+- Fixed: disabled controls could reappear depending on CSS load order.
+- Fixed: audio skins showed a captions button with no way to turn it off.
+- Improved: saving media or a playlist returns you to the list.
+- Improved: the dashboard reports an unactivated licence.
 
 ## 1.0.0
 
-Initial release. Ink Player launches with a branded video and audio player and a media library managed from a Vue admin dashboard under a top-level **Ink Player** menu.
-
-**Highlights:**
-
-- **Media library** — a single source of truth for every video and audio item, edited once and reflected everywhere it is placed. See [Media](/media).
-- **Providers** — one consistent player for local uploads, remote direct URLs (MP4, HLS, DASH, audio), YouTube, Vimeo, Bunny.net Stream, Bunny.net Classic Storage, and Mux. See [Providers](/guide/providers).
-- **Multi-language video** — alternate spoken-language source versions with a player language switcher that preserves playback position. See [Multi-language video](/media/multi-language).
-- **Gutenberg blocks** — Ink Player, Ink Audio Player, Ink Playlist, and Ink Audio Playlist. See [Blocks](/guide/blocks).
-- **Shortcodes** — `[ink_player]`, `[ink_playlist]`, `[inkp_share]`, and `[inkp_timestamp]` for media, playlists, share pages, and clickable seeking timestamps. See [Shortcodes](/guide/shortcodes).
-- **Access control** — Public, Private, and Password modes, with signed/token playback for Bunny.net and Mux. See [Access control](/guide/access-control).
-- **Analytics** — last-30-day KPIs, a views/viewers chart, and top performing media. See [Analytics](/analytics).
-- **Leads** — capture and review viewer leads. See [Leads](/leads).
-- **Branding** — apply your colors and logo across every player. See [Settings → Branding](/settings/branding).
-- **Presets** — reusable player configurations. See [Settings → Presets](/settings/presets).
-- **Page builders** — native Elementor widget and Beaver Builder module. See [Page builders](/guide/page-builders).
-- **Integrations** — connect providers and enable page builders from [Settings → Integrations](/settings/integrations).
+- Initial release.
+- Media library for every video and audio item, edited once and reflected everywhere.
+- Providers: local uploads, remote MP4/HLS/DASH and audio, YouTube, Vimeo, Bunny.net Stream, Bunny.net Classic Storage, Mux, Cloudflare Stream and Cloudflare R2.
+- Multi-language video and audio, with a switcher that keeps the playback position.
+- Draft and Published states for media and playlists.
+- Player theming: control bar colour, icon colour, icon hover background and play-button background.
+- Playlist theming across the List, Grid and Slider layouts.
+- Branding and reusable presets.
+- Blocks: Ink Player, Ink Audio Player, Ink Playlist and Ink Audio Playlist.
+- Shortcodes: `[ink_player]`, `[ink_playlist]`, `[inkp_share]` and `[inkp_timestamp]`.
+- Elementor widget and Beaver Builder module.
+- Access control: public, private and password, with signed playback.
+- Ads: pre-roll, mid-roll and post-roll, from a video file or a VAST tag.
+- Analytics and lead capture.
