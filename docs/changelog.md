@@ -4,6 +4,14 @@ description: Every Ink Player release and what changed in it.
 
 # Changelog
 
+## 1.0.2
+
+- Fixed: network activation on multisite created tables only for the site it was activated from; every other site fataled on its first request.
+- Fixed: a site added to a network after activation had no tables of its own.
+- Added: a site missing its tables now rebuilds them on the next request, so an affected install repairs itself on update.
+- Fixed: a missing table can no longer take down the front end.
+- Changed: no longer warns about an unactivated licence, which gates no feature.
+
 ## 1.0.1
 
 - Fixed: an empty control bar still painted a band over the video.
