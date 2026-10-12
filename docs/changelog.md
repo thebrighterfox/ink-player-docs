@@ -4,6 +4,15 @@ description: Every Ink Player release and what changed in it.
 
 # Changelog
 
+## 1.0.3
+
+- Added: open videos in a [popup](/media/video-inspector#popup) from a poster, button or text link.
+- Added: option to play the popup video as soon as it opens.
+- Added: colours for the play button icon and control bar text.
+- Improved: popup videos load only when opened.
+- Fixed: other plugins' scripts loading in the block preview.
+- Fixed: theme colours leaking into the preview device toggles.
+
 ## 1.0.2
 
 - Fixed: network activation on multisite created tables only for the site it was activated from; every other site fataled on its first request.
