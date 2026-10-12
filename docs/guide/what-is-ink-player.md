@@ -45,6 +45,7 @@ Every piece of media you add becomes a **media record**. Wherever you place that
 - Video and audio [Gutenberg blocks](/guide/blocks) and [playlists](/playlists)
 - [Shortcodes](/guide/shortcodes) for media, playlists, sharing, and clickable timestamps
 - [Multi-language video](/media/multi-language) with alternate spoken-language source switching
+- [Popup](/media/video-inspector#popup) — open any video in a lightbox from a poster, button, or text link
 - [Overlays](/guide/overlays) — calls to action, watermarks, email capture, hotspots, banners, and more
 - [Linear ads](/settings/ads) — pre-roll, mid-roll, and post-roll, custom or VAST
 - [Access control](/guide/access-control) — Public, Private, or Password

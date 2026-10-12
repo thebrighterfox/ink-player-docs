@@ -30,7 +30,7 @@ You can paste a source directly into the placeholder — a YouTube link, a Vimeo
 
 Select the block and open the **inspector** (the settings sidebar on the right). The inspector groups its options into config panels so you can adjust playback and appearance for that placement.
 
-For a full panel-by-panel explanation of the video inspector, see [Video inspector panels](/media/video-inspector). It covers Basic Settings, Appearance, Overlays, Ads, Presets, Chapters, Captions, Multi-Language, Global Branding, Timestamp, and Who can watch.
+For a full panel-by-panel explanation of the video inspector, see [Video inspector panels](/media/video-inspector). It covers Basic Settings, Popup, Appearance, Overlays, Ads, Presets, Chapters, Captions, Multi-Language, Global Branding, Timestamp, and Who can watch.
 
 ### Draft and published
 

@@ -1,5 +1,5 @@
 ---
-description: Complete reference for every Ink Player video inspector panel, including Basic Settings, Appearance, Overlays, Ads, Presets, Chapters, Captions, Multi-Language, Branding, Timestamp, and Who can watch.
+description: Complete reference for every Ink Player video inspector panel, including Basic Settings, Popup, Appearance, Overlays, Ads, Presets, Chapters, Captions, Multi-Language, Branding, Timestamp, and Who can watch.
 ---
 
 # Video inspector panels
@@ -38,6 +38,35 @@ Use **Basic Settings** for the video identity and core playback behavior.
 | **Aspect Ratio** | Appears when **Fluid** is off; choose the fixed player ratio. |
 
 Use this panel first when a video needs a better title, poster, or mobile playback behavior.
+
+## Popup
+
+Use **Popup** to open the video in a lightbox instead of playing it inline. The page shows a trigger, and the player opens in a modal when a visitor clicks it. Popup is available for video only.
+
+<figure>
+  <img src="/screenshots/media/video-popup.png" alt="Popup panel in the media editor">
+  <figcaption>Popup panel in the media editor</figcaption>
+</figure>
+
+| Option | What it does |
+| --- | --- |
+| **Open in a popup** | Switches the video from inline to popup. Off by default. |
+| **Play when it opens** | Starts playback as soon as the popup opens. On by default. |
+| **What opens it** | Choose **Poster image**, **Button**, or **Text link**. |
+| **Popup image** | Poster trigger only. The image visitors click. Leave it empty to use the media poster. |
+| **Label** | Button and text link only. The trigger text. Defaults to *Watch video*. |
+| **Alignment** | Button and text link only. Places the trigger left, center, or right. |
+| **Text colour** | Button and text link only. Colour of the trigger text. |
+| **Background** | Button only. Button background colour. |
+| **Corner radius** | Button only. Rounds the button corners from `0px` to `60px`. |
+
+The preview shows the real trigger, and clicking it opens the real modal. Visitors close the popup with the close button, the **Esc** key, or a click outside the video. Playback stops when it closes.
+
+::: tip
+Because the popup opens on a click, it can start **with sound**. An inline player that autoplays has to start muted.
+:::
+
+The player is only loaded when someone opens the popup, so a popup video adds almost nothing to page load. Popup works everywhere the media is placed: [blocks](/guide/blocks), [shortcodes](/guide/shortcodes), and [page builders](/guide/page-builders).
 
 ## Appearance
 
@@ -249,7 +278,7 @@ Private and password protection are enforceable for providers whose source can b
 
 ## Recommended setup order
 
-1. Start with **Basic Settings** and **Appearance**.
+1. Start with **Basic Settings** and **Appearance**, and turn on **Popup** if the video should open in a lightbox.
 2. Apply or create a **Preset**.
 3. Add **Chapters**, **Captions**, and **Multi-Language** versions.
 4. Configure **Overlays** and **Ads** for conversion or monetization.

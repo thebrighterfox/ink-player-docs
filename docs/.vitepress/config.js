@@ -182,6 +182,7 @@ export default defineConfig({
               collapsed: false,
               items: [
                 { text: 'Basic Settings', link: '/media/video-inspector#basic-settings' },
+                { text: 'Popup', link: '/media/video-inspector#popup' },
                 { text: 'Appearance', link: '/media/video-inspector#appearance' },
                 {
                   text: 'Overlays',
