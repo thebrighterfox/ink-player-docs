@@ -54,11 +54,16 @@ Use **Popup** to open the video in a lightbox instead of playing it inline. The 
 | **Play when it opens** | Starts playback as soon as the popup opens. On by default. |
 | **What opens it** | Choose **Poster image**, **Button**, or **Text link**. |
 | **Popup image** | Poster trigger only. The image visitors click. Leave it empty to use the media poster. |
+| **Show play button** | Poster trigger only. Shows a play button over the image. On by default. Turn it off when your image already has its own play graphic. |
+| **Play button background** | Poster trigger only. Colour of the play button. Leave it empty to match the player. |
+| **Play icon** | Poster trigger only. Colour of the play icon. Leave it empty to match the player. |
 | **Label** | Button and text link only. The trigger text. Defaults to *Watch video*. |
 | **Alignment** | Button and text link only. Places the trigger left, center, or right. |
 | **Text colour** | Button and text link only. Colour of the trigger text. |
 | **Background** | Button only. Button background colour. |
 | **Corner radius** | Button only. Rounds the button corners from `0px` to `60px`. |
+
+By default the poster's play button uses the player's **Play Button Background** and **Icon** colours from [Appearance](#appearance), and the button and text link use your [brand colour](/settings/branding).
 
 The preview shows the real trigger, and clicking it opens the real modal. Visitors close the popup with the close button, the **Esc** key, or a click outside the video. Playback stops when it closes.
 
