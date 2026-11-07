@@ -169,6 +169,7 @@ export default defineConfig({
             { text: 'Overlays', link: '/guide/overlays' },
             { text: 'Access Control', link: '/guide/access-control' },
             { text: 'Page Builders', link: '/guide/page-builders' },
+            { text: 'LMS Plugins', link: '/guide/lms' },
           ],
         },
       ],
