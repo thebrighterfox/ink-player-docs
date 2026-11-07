@@ -79,6 +79,7 @@ const logos = [
     {src: '/logos/mux.png', alt: 'Mux', link: '/settings/integrations/mux'},
     {src: '/logos/cloudflare-stream.svg', alt: 'Cloudflare Stream', link: '/settings/integrations/cloudflare-stream'},
     {src: '/logos/cloudflare-r2.svg', alt: 'Cloudflare R2', link: '/settings/integrations/cloudflare-r2'},
+    {src: '/logos/amazon-s3.svg', alt: 'Amazon S3', link: '/settings/integrations/amazon-s3'},
     {src: '/logos/mailchimp.png', alt: 'Mailchimp', link: '/settings/integrations/mailchimp'},
     {src: '/logos/mailerlite.webp', alt: 'MailerLite', link: '/settings/integrations/mailerlite'},
     {src: '/logos/activecampaign.png', alt: 'ActiveCampaign', link: '/settings/integrations/activecampaign'},

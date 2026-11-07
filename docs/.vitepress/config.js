@@ -322,6 +322,7 @@ export default defineConfig({
             { text: 'Mux', link: '/settings/integrations/mux' },
             { text: 'Cloudflare Stream', link: '/settings/integrations/cloudflare-stream' },
             { text: 'Cloudflare R2', link: '/settings/integrations/cloudflare-r2' },
+            { text: 'Amazon S3', link: '/settings/integrations/amazon-s3' },
             { text: 'YouTube', link: '/settings/integrations/youtube' },
             { text: 'Vimeo', link: '/settings/integrations/vimeo' },
             { text: 'Mailchimp', link: '/settings/integrations/mailchimp' },
