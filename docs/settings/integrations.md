@@ -1,5 +1,5 @@
 ---
-description: Connect Ink Player to Bunny.net, Mux, Cloudflare Stream, Cloudflare R2, Amazon S3, YouTube, Vimeo, Mailchimp, MailerLite, ActiveCampaign, FluentCRM, WooCommerce, Elementor, Beaver Builder, Google Analytics, and AutomatorWP.
+description: Connect Ink Player to Bunny.net, Mux, Cloudflare Stream, Cloudflare R2, Amazon S3, YouTube, Vimeo, Mailchimp, MailerLite, ActiveCampaign, FluentCRM, WooCommerce, Elementor, Beaver Builder, Google Analytics, AutomatorWP, LearnDash, LifterLMS, and Tutor LMS.
 ---
 
 # Integrations
@@ -30,6 +30,7 @@ Cards are organized into categories so related tools are grouped together:
 - **Builder** — page builders Ink Player plugs into.
 - **Analytics** — playback and engagement reporting.
 - **Automation** — no-code automation platforms Ink Player can trigger.
+- **LMS** — course plugins where students must finish a lesson's video.
 
 ## Enabling and managing an integration
 

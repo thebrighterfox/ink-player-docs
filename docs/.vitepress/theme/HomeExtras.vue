@@ -89,6 +89,9 @@ const logos = [
     {src: '/logos/beaver.png', alt: 'Beaver Builder', link: '/settings/integrations/beaver-builder'},
     {src: '/logos/google_analytics.svg', alt: 'Google Analytics', link: '/settings/integrations/google-analytics'},
     {src: '/logos/automatorwp.svg', alt: 'AutomatorWP', link: '/settings/integrations/automatorwp'},
+    {src: '/logos/learndash.svg', alt: 'LearnDash', link: '/settings/integrations/learndash'},
+    {src: '/logos/lifterlms.png', alt: 'LifterLMS', link: '/settings/integrations/lifterlms'},
+    {src: '/logos/tutor.svg', alt: 'Tutor LMS', link: '/settings/integrations/tutor-lms'},
 ]
 
 // Duplicated once so the marquee track loops seamlessly at translateX(-50%).

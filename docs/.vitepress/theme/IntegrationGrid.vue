@@ -29,6 +29,9 @@ const integrations = [
     {name: 'Beaver Builder', cat: 'Builder', logo: '/logos/beaver.png', link: '/settings/integrations/beaver-builder'},
     {name: 'Google Analytics', cat: 'Analytics', logo: '/logos/google_analytics.svg', link: '/settings/integrations/google-analytics'},
     {name: 'AutomatorWP', cat: 'Automation', logo: '/logos/automatorwp.svg', link: '/settings/integrations/automatorwp'},
+    {name: 'LearnDash', cat: 'LMS', logo: '/logos/learndash.svg', link: '/settings/integrations/learndash'},
+    {name: 'LifterLMS', cat: 'LMS', logo: '/logos/lifterlms.png', link: '/settings/integrations/lifterlms'},
+    {name: 'Tutor LMS', cat: 'LMS', logo: '/logos/tutor.svg', link: '/settings/integrations/tutor-lms'},
 ]
 </script>
 
